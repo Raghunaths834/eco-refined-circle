@@ -1,12 +1,248 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
+import { 
+  Recycle, 
+  Leaf, 
+  Shield, 
+  Award, 
+  ArrowRight, 
+  CheckCircle, 
+  Factory,
+  Users,
+  Globe,
+  Phone
+} from "lucide-react";
+import heroImage from "@/assets/hero-image.jpg";
 
 const Index = () => {
+  const features = [
+    {
+      icon: <Recycle className="h-8 w-8 text-primary" />,
+      title: "Advanced Recycling",
+      description: "State-of-the-art technology for processing used oil into high-quality recycled products."
+    },
+    {
+      icon: <Leaf className="h-8 w-8 text-eco-green" />,
+      title: "Environmental Impact",
+      description: "Reducing waste and pollution while conserving natural resources for future generations."
+    },
+    {
+      icon: <Shield className="h-8 w-8 text-secondary" />,
+      title: "Certified Quality",
+      description: "ISO 14001 certified processes ensuring highest quality and environmental standards."
+    },
+    {
+      icon: <Award className="h-8 w-8 text-accent" />,
+      title: "Industry Leader",
+      description: "Over 15 years of experience in sustainable oil recycling and waste management."
+    }
+  ];
+
+  const stats = [
+    { number: "1M+", label: "Gallons Recycled", icon: <Factory className="h-6 w-6" /> },
+    { number: "500+", label: "Happy Clients", icon: <Users className="h-6 w-6" /> },
+    { number: "98%", label: "Recovery Rate", icon: <Recycle className="h-6 w-6" /> },
+    { number: "15+", label: "Years Experience", icon: <Globe className="h-6 w-6" /> }
+  ];
+
+  const benefits = [
+    "Reduce environmental pollution and waste",
+    "Cost-effective oil management solutions", 
+    "Full compliance with environmental regulations",
+    "Sustainable circular economy practices",
+    "Professional collection and processing services"
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-hero overflow-hidden">
+        <div className="absolute inset-0 bg-black/40" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="relative container mx-auto px-4 py-24 lg:py-32">
+          <div className="max-w-3xl">
+            <Badge variant="secondary" className="mb-6 bg-primary/20 text-primary-foreground border-primary/30">
+              <Leaf className="h-4 w-4 mr-2" />
+              Sustainable Oil Recycling for a Cleaner Future
+            </Badge>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Transforming Waste Oil Into
+              <span className="text-accent block mt-2">Valuable Resources</span>
+            </h1>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              Leading oil recycling facility providing sustainable solutions for businesses. 
+              We turn used oil into high-quality recycled products while protecting the environment.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+                <Link to="/contact">
+                  Get Free Quote
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
+                <Link to="/about">Learn About Us</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-12 bg-background border-b">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-3">
+                  <div className="bg-primary/10 p-3 rounded-lg text-primary">
+                    {stat.icon}
+                  </div>
+                </div>
+                <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">{stat.number}</div>
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-gradient-section">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge variant="outline" className="mb-4">
+              Why Choose Us
+            </Badge>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              Sustainable Oil Recycling Solutions
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Advanced technology, environmental responsibility, and reliable service 
+              make us the trusted choice for oil recycling.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="bg-gradient-card border-0 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+                <CardContent className="p-6 text-center">
+                  <div className="bg-muted p-4 rounded-lg w-fit mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{feature.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge variant="outline" className="mb-4">
+                Environmental Benefits
+              </Badge>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+                Making a Positive Impact on Our Planet
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Our advanced oil recycling processes help businesses reduce their environmental 
+                footprint while creating valuable resources from waste materials.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-success flex-shrink-0" />
+                    <span className="text-foreground">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Button className="bg-primary hover:bg-primary/90" asChild>
+                <Link to="/about">
+                  Learn More About Our Process
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Link>
+              </Button>
+            </div>
+            
+            <div className="space-y-6">
+              <Card className="bg-gradient-card border-0 shadow-soft">
+                <CardContent className="p-6">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="bg-success/20 p-3 rounded-lg">
+                      <Recycle className="h-6 w-6 text-success" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground">Circular Economy</h3>
+                      <p className="text-sm text-muted-foreground">Sustainable waste-to-resource solutions</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground">
+                    Converting waste oil into valuable products, reducing the need for virgin materials 
+                    and supporting a circular economy model.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gradient-card border-0 shadow-soft">
+                <CardContent className="p-6">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="bg-primary/20 p-3 rounded-lg">
+                      <Shield className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground">Compliance & Safety</h3>
+                      <p className="text-sm text-muted-foreground">Full regulatory compliance guaranteed</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground">
+                    Our certified processes ensure complete compliance with environmental regulations 
+                    while maintaining the highest safety standards.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-hero text-center">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Ready to Make a Sustainable Choice?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              Contact us today for a free consultation and learn how we can help your business 
+              implement sustainable oil recycling solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+                <Link to="/contact">
+                  <Phone className="h-5 w-5 mr-2" />
+                  Get Free Consultation
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
+                <Link to="/products">View Our Products</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

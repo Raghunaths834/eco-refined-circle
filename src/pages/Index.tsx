@@ -112,37 +112,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-gradient-section">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">
-              Why Choose Us
-            </Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              Sustainable Oil Recycling Solutions
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Advanced technology, environmental responsibility, and reliable service 
-              make us the trusted choice for oil recycling.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="bg-gradient-card border-0 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6 text-center">
-                  <div className="bg-muted p-4 rounded-lg w-fit mx-auto mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Benefits Section */}
       <section className="py-20 bg-background">
@@ -230,12 +199,28 @@ const Index = () => {
               implement sustainable oil recycling solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
-                <Link to="/contact">
-                  <Phone className="h-5 w-5 mr-2" />
-                  Get Free Consultation
-                </Link>
-              </Button>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-left max-w-md mx-auto">
+                <div className="text-white/90 mb-4">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Phone className="h-5 w-5" />
+                    <span className="font-semibold">Phone</span>
+                  </div>
+                  <p className="mb-1">+1 (555) 123-4567</p>
+                  <p className="mb-1">+1 (555) 123-4568 (Emergency)</p>
+                  <p className="text-sm text-white/70">Call us for immediate assistance</p>
+                </div>
+                <div className="text-white/90">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <div className="h-5 w-5 flex items-center justify-center">
+                      <span className="text-sm">✉</span>
+                    </div>
+                    <span className="font-semibold">Email</span>
+                  </div>
+                  <p className="mb-1">info@ecooilsolutions.com</p>
+                  <p className="mb-1">sales@ecooilsolutions.com</p>
+                  <p className="text-sm text-white/70">Send us a message anytime</p>
+                </div>
+              </div>
               <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
                 <Link to="/products">View Our Products</Link>
               </Button>

@@ -215,68 +215,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Team Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">
-              Our Team
-            </Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              Meet the Experts Behind Our Success
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our experienced team of professionals combines decades of industry expertise 
-              with a shared commitment to environmental sustainability.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-gradient-card border-0 shadow-soft hover:shadow-medium transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="bg-primary/20 p-6 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                  <Users className="h-10 w-10 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Sarah Johnson</h3>
-                <p className="text-primary font-medium mb-3">Operations Director</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  15+ years in industrial operations and environmental compliance. 
-                  Leads our daily operations and quality assurance programs.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-card border-0 shadow-soft hover:shadow-medium transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="bg-secondary/20 p-6 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                  <Recycle className="h-10 w-10 text-secondary" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Michael Chen</h3>
-                <p className="text-secondary font-medium mb-3">Process Engineer</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Chemical engineering expert specializing in oil purification processes. 
-                  Continuously improves our recycling efficiency and product quality.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-card border-0 shadow-soft hover:shadow-medium transition-all duration-300">
-              <CardContent className="p-6 text-center">
-                <div className="bg-eco-green/20 p-6 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                  <Leaf className="h-10 w-10 text-eco-green" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Emma Rodriguez</h3>
-                <p className="text-eco-green font-medium mb-3">Environmental Compliance</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Environmental science background with expertise in regulatory compliance. 
-                  Ensures all operations meet environmental standards and certifications.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Values Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">

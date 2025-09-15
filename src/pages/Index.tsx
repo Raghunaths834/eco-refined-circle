@@ -199,28 +199,12 @@ const Index = () => {
               implement sustainable oil recycling solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-left max-w-md mx-auto">
-                <div className="text-white/90 mb-4">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Phone className="h-5 w-5" />
-                    <span className="font-semibold">Phone</span>
-                  </div>
-                  <p className="mb-1">+1 (555) 123-4567</p>
-                  <p className="mb-1">+1 (555) 123-4568 (Emergency)</p>
-                  <p className="text-sm text-white/70">Call us for immediate assistance</p>
-                </div>
-                <div className="text-white/90">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <div className="h-5 w-5 flex items-center justify-center">
-                      <span className="text-sm">✉</span>
-                    </div>
-                    <span className="font-semibold">Email</span>
-                  </div>
-                  <p className="mb-1">info@ecooilsolutions.com</p>
-                  <p className="mb-1">sales@ecooilsolutions.com</p>
-                  <p className="text-sm text-white/70">Send us a message anytime</p>
-                </div>
-              </div>
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+                <Link to="/contact">
+                  <Phone className="h-5 w-5 mr-2" />
+                  Contact Us
+                </Link>
+              </Button>
               <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
                 <Link to="/products">View Our Products</Link>
               </Button>

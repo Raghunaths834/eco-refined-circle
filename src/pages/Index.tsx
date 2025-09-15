@@ -14,7 +14,7 @@ import {
   Globe,
   Phone
 } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import oilRecyclingBg from "@/assets/oil-recycling-bg.jpg";
 
 const Index = () => {
   const features = [
@@ -59,10 +59,10 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-hero overflow-hidden">
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/60" />
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+          style={{ backgroundImage: `url(${oilRecyclingBg})` }}
         />
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-3xl">

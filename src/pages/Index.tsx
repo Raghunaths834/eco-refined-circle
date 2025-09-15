@@ -66,19 +66,19 @@ const Index = () => {
         />
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-3xl">
-            <Badge variant="secondary" className="mb-6 bg-primary/20 text-primary-foreground border-primary/30">
+            <Badge variant="secondary" className="mb-6 bg-primary/20 text-primary-foreground border-primary/30 animate-fade-in">
               <Leaf className="h-4 w-4 mr-2" />
               Sustainable Oil Recycling for a Cleaner Future
             </Badge>
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in [animation-delay:200ms]">
               Transforming Waste Oil Into
               <span className="text-accent block mt-2">Valuable Resources</span>
             </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-xl text-white/90 mb-8 leading-relaxed animate-fade-in [animation-delay:400ms]">
               Leading oil recycling facility providing sustainable solutions for businesses. 
               We turn used oil into high-quality recycled products while protecting the environment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in [animation-delay:600ms]">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
                 <Link to="/contact">
                   Get Free Quote
@@ -98,7 +98,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center animate-fade-in hover-scale" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="flex justify-center mb-3">
                   <div className="bg-primary/10 p-3 rounded-lg text-primary">
                     {stat.icon}
@@ -117,7 +117,7 @@ const Index = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="animate-fade-in">
               <Badge variant="outline" className="mb-4">
                 Environmental Benefits
               </Badge>
@@ -131,14 +131,14 @@ const Index = () => {
               
               <div className="space-y-4 mb-8">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
+                  <div key={index} className="flex items-center space-x-3 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
                     <CheckCircle className="h-5 w-5 text-success flex-shrink-0" />
                     <span className="text-foreground">{benefit}</span>
                   </div>
                 ))}
               </div>
 
-              <Button className="bg-primary hover:bg-primary/90" asChild>
+              <Button className="bg-primary hover:bg-primary/90 hover-scale" asChild>
                 <Link to="/about">
                   Learn More About Our Process
                   <ArrowRight className="h-4 w-4 ml-2" />
@@ -146,8 +146,8 @@ const Index = () => {
               </Button>
             </div>
             
-            <div className="space-y-6">
-              <Card className="bg-gradient-card border-0 shadow-soft">
+            <div className="space-y-6 animate-fade-in [animation-delay:300ms]">
+              <Card className="bg-gradient-card border-0 shadow-soft hover-scale transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4 mb-4">
                     <div className="bg-success/20 p-3 rounded-lg">
@@ -165,7 +165,7 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-card border-0 shadow-soft">
+              <Card className="bg-gradient-card border-0 shadow-soft hover-scale transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4 mb-4">
                     <div className="bg-primary/20 p-3 rounded-lg">
@@ -190,7 +190,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-hero text-center">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto animate-fade-in">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Make a Sustainable Choice?
             </h2>
@@ -198,14 +198,14 @@ const Index = () => {
               Contact us today for a free consultation and learn how we can help your business 
               implement sustainable oil recycling solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in [animation-delay:300ms]">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground hover-scale" asChild>
                 <Link to="/contact#phone-section">
                   <Phone className="h-5 w-5 mr-2" />
                   Contact Us
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
+              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 hover-scale" asChild>
                 <Link to="/products">View Our Products</Link>
               </Button>
             </div>

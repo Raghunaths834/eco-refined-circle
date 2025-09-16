@@ -14,7 +14,7 @@ import {
   Globe,
   Phone
 } from "lucide-react";
-import oilRecyclingBg from "@/assets/oil-recycling-modern.jpg";
+import oilRecyclingBg from "@/assets/oil-recycling-equipment.jpg";
 
 const Index = () => {
   const features = [

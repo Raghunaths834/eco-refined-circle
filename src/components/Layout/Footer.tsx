@@ -13,7 +13,7 @@ const Footer = () => {
                 <Recycle className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="text-lg font-bold">EcoOil Solutions</h3>
+                <h3 className="text-lg font-bold">GS Lubricants</h3>
                 <p className="text-sm text-primary-foreground/70">Sustainable Recycling</p>
               </div>
             </Link>
@@ -75,7 +75,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-accent flex-shrink-0" />
-                <span className="text-sm text-primary-foreground/80">info@ecooilsolutions.com</span>
+                <span className="text-sm text-primary-foreground/80">info@gslubricants.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
@@ -91,7 +91,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-primary-foreground/60">
-              © 2024 EcoOil Solutions. All rights reserved.
+              © 2024 GS Lubricants. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">

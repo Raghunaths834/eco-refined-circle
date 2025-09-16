@@ -58,7 +58,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-hero-animated bg-gradient-animated animate-gradient-shift overflow-hidden">
+      <section className="relative bg-gradient-hero-animated bg-gradient-animated animate-gradient-wave overflow-hidden">
         <div className="absolute inset-0 bg-black/60" />
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"

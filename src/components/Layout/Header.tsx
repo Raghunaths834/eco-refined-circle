@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Recycle, Phone } from "lucide-react";
+import { Menu, X, Recycle } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,16 +50,6 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Contact Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm" asChild>
-              <Link to="/contact">
-                <Phone className="h-4 w-4 mr-2" />
-                Get Quote
-              </Link>
-            </Button>
-          </div>
-
           {/* Mobile menu button */}
           <Button
             variant="ghost"
@@ -87,12 +77,6 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button variant="outline" size="sm" className="w-fit mt-4" asChild>
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  <Phone className="h-4 w-4 mr-2" />
-                  Get Quote
-                </Link>
-              </Button>
             </nav>
           </div>
         )}

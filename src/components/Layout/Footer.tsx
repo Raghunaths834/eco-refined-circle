@@ -14,7 +14,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold">GS Lubricants</h3>
-                <p className="text-sm text-primary-foreground/70">Sustainable Recycling</p>
+                <p className="text-sm text-primary-foreground/70">M/s Gouri Shankar Lubricants</p>
               </div>
             </Link>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">

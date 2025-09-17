@@ -77,8 +77,8 @@ const Index = () => {
               <span className="text-accent block mt-2">Valuable Resources</span>
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed animate-fade-in [animation-delay:400ms]">
-              Leading oil recycling facility providing sustainable solutions for businesses. 
-              We turn used oil into high-quality recycled products while protecting the environment.
+              Trusted partner in lubricant manufacturing and authorized oil recycling. 
+              We provide businesses with high-quality products while promoting sustainability and compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in [animation-delay:600ms]">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>

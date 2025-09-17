@@ -42,8 +42,8 @@ const Index = () => {
 
   const stats = [
     { number: "1M+", label: "Gallons Recycled", icon: <Factory className="h-6 w-6" /> },
-    { number: "600", label: "🔄 Tons/Year Authorized Oil Recycling", icon: <Recycle className="h-6 w-6" /> },
-    { number: "100%", label: "🛡️ Regulatory Compliance", icon: <Shield className="h-6 w-6" /> },
+    { number: "600", label: "Tons/Year Authorized Oil Recycling", icon: <Recycle className="h-6 w-6" /> },
+    { number: "100%", label: "Regulatory Compliance", icon: <Shield className="h-6 w-6" /> },
     { number: "500+", label: "Happy Clients", icon: <Users className="h-6 w-6" /> },
     { number: "98%", label: "Recovery Rate", icon: <Recycle className="h-6 w-6" /> },
     { number: "15+", label: "Years Experience", icon: <Globe className="h-6 w-6" /> }
@@ -69,7 +69,7 @@ const Index = () => {
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-3xl">
             <Badge variant="secondary" className="mb-6 bg-primary/20 text-primary-foreground border-primary/30 animate-fade-in">
-              <Leaf className="h-4 w-4 mr-2" />
+              <Award className="h-4 w-4 mr-2" />
               Sustainable Oil Recycling for a Cleaner Future
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in [animation-delay:200ms]">

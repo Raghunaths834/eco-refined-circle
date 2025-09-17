@@ -45,7 +45,6 @@ const Index = () => {
     { number: "1M+", label: "Gallons Recycled", icon: <Factory className="h-6 w-6" /> },
     { number: "600", label: "Tons/Year Authorized Oil Recycling", icon: <Gauge className="h-6 w-6" /> },
     { number: "100%", label: "Regulatory Compliance", icon: <Shield className="h-6 w-6" /> },
-    { number: "500+", label: "Happy Clients", icon: <Users className="h-6 w-6" /> },
     { number: "98%", label: "Recovery Rate", icon: <Recycle className="h-6 w-6" /> },
     { number: "15+", label: "Years Experience", icon: <Globe className="h-6 w-6" /> }
   ];

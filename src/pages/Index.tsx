@@ -12,7 +12,8 @@ import {
   Factory,
   Users,
   Globe,
-  Phone
+  Phone,
+  Gauge
 } from "lucide-react";
 import oilRecyclingBg from "@/assets/oil-recycling-equipment.jpg";
 
@@ -42,7 +43,7 @@ const Index = () => {
 
   const stats = [
     { number: "1M+", label: "Gallons Recycled", icon: <Factory className="h-6 w-6" /> },
-    { number: "600", label: "Tons/Year Authorized Oil Recycling", icon: <Recycle className="h-6 w-6" /> },
+    { number: "600", label: "Tons/Year Authorized Oil Recycling", icon: <Gauge className="h-6 w-6" /> },
     { number: "100%", label: "Regulatory Compliance", icon: <Shield className="h-6 w-6" /> },
     { number: "500+", label: "Happy Clients", icon: <Users className="h-6 w-6" /> },
     { number: "98%", label: "Recovery Rate", icon: <Recycle className="h-6 w-6" /> },

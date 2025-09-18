@@ -19,7 +19,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
       const timer = setTimeout(() => {
         setDisplayLocation(location);
         setIsVisible(true);
-      }, 150); // Half of the transition duration
+      }, 400); // Slower timing for the crossover
 
       return () => clearTimeout(timer);
     } else {
@@ -30,8 +30,10 @@ const PageTransition = ({ children }: PageTransitionProps) => {
 
   return (
     <div
-      className={`transition-opacity duration-300 ease-in-out ${
-        isVisible ? "opacity-100" : "opacity-0"
+      className={`transition-all duration-[800ms] ease-in-out transform ${
+        isVisible 
+          ? "opacity-100 translate-y-0" 
+          : "opacity-0 translate-y-2"
       }`}
       key={displayLocation.pathname}
     >

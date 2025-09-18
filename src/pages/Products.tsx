@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { 
   Fuel, 
@@ -135,96 +136,107 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Products & Services Tabs */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
-              Premium Products
+              Premium Products & Services
             </Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              Recycled Oil Products Portfolio
+              Complete Oil Recycling Solutions
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our advanced recycling processes produce high-quality oil products that perform 
-              as well as virgin materials while supporting environmental sustainability.
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+              Explore our comprehensive range of recycled oil products and end-to-end services
+              that meet the highest industry standards.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            {products.map((product, index) => (
-              <Card key={index} className="bg-gradient-card border-0 shadow-soft hover:shadow-medium transition-all duration-300">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="bg-muted p-3 rounded-lg">
-                      {product.icon}
-                    </div>
-                    <Badge variant="secondary">{product.grade}</Badge>
-                  </div>
-                  <CardTitle className="text-2xl text-foreground">{product.title}</CardTitle>
-                  <p className="text-muted-foreground">{product.description}</p>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-3">Specifications</h4>
-                      <div className="space-y-2">
-                        {product.specifications.map((spec, specIndex) => (
-                          <div key={specIndex} className="flex items-center space-x-2">
-                            <CheckCircle className="h-4 w-4 text-success flex-shrink-0" />
-                            <span className="text-sm text-muted-foreground">{spec}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-3">Applications</h4>
-                      <div className="space-y-2">
-                        {product.applications.map((app, appIndex) => (
-                          <div key={appIndex} className="flex items-center space-x-2">
-                            <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" />
-                            <span className="text-sm text-muted-foreground">{app}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+          <Tabs defaultValue="products" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-12">
+              <TabsTrigger value="products" className="text-base">Oil Products</TabsTrigger>
+              <TabsTrigger value="services" className="text-base">Our Services</TabsTrigger>
+            </TabsList>
 
-      {/* Services Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">
-              Complete Solutions
-            </Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              End-to-End Oil Recycling Services
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We provide comprehensive services from collection to processing, ensuring 
-              seamless oil recycling solutions for your business needs.
-            </p>
-          </div>
+            <TabsContent value="products" className="space-y-8">
+              <div className="grid lg:grid-cols-2 gap-8">
+                {products.map((product, index) => (
+                  <Card key={index} className="bg-gradient-card border-0 shadow-soft hover:shadow-medium transition-all duration-300">
+                    <CardHeader className="pb-4">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="bg-muted p-3 rounded-lg">
+                          {product.icon}
+                        </div>
+                        <Badge variant="secondary">{product.grade}</Badge>
+                      </div>
+                      <CardTitle className="text-2xl text-foreground">{product.title}</CardTitle>
+                      <p className="text-muted-foreground">{product.description}</p>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div>
+                          <h4 className="font-semibold text-foreground mb-3">Specifications</h4>
+                          <div className="space-y-2">
+                            {product.specifications.map((spec, specIndex) => (
+                              <div key={specIndex} className="flex items-center space-x-2">
+                                <CheckCircle className="h-4 w-4 text-success flex-shrink-0" />
+                                <span className="text-sm text-muted-foreground">{spec}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-foreground mb-3">Applications</h4>
+                          <div className="space-y-2">
+                            {product.applications.map((app, appIndex) => (
+                              <div key={appIndex} className="flex items-center space-x-2">
+                                <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" />
+                                <span className="text-sm text-muted-foreground">{app}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="bg-background border-0 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6 text-center">
-                  <div className="bg-muted p-4 rounded-lg w-fit mx-auto mb-4">
-                    {service.icon}
+            <TabsContent value="services" className="space-y-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {services.map((service, index) => (
+                  <Card key={index} className="bg-gradient-card border-0 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+                    <CardContent className="p-6 text-center">
+                      <div className="bg-muted p-4 rounded-lg w-fit mx-auto mb-4">
+                        {service.icon}
+                      </div>
+                      <h3 className="text-lg font-semibold text-foreground mb-3">{service.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+              
+              <div className="mt-12 text-center">
+                <div className="bg-gradient-card rounded-2xl p-8 max-w-4xl mx-auto">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">
+                    Complete Service Integration
+                  </h3>
+                  <p className="text-muted-foreground mb-6 text-lg">
+                    Our services work seamlessly together to provide you with a complete 
+                    oil recycling solution from collection to final product delivery.
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <Badge variant="outline" className="text-sm px-4 py-2">24/7 Collection</Badge>
+                    <Badge variant="outline" className="text-sm px-4 py-2">Real-time Tracking</Badge>
+                    <Badge variant="outline" className="text-sm px-4 py-2">Quality Certification</Badge>
+                    <Badge variant="outline" className="text-sm px-4 py-2">Custom Solutions</Badge>
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 

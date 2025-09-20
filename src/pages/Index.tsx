@@ -12,7 +12,7 @@ import {
   Factory,
   Users,
   Globe,
-  Phone,
+  Mail,
   Gauge
 } from "lucide-react";
 import oilRecyclingBg from "@/assets/oil-recycling-equipment.jpg";
@@ -203,7 +203,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in [animation-delay:300ms]">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground hover-scale" asChild>
                 <Link to="/contact#phone-section">
-                  <Phone className="h-5 w-5 mr-2" />
+                  <Mail className="h-5 w-5 mr-2" />
                   Contact Us
                 </Link>
               </Button>

@@ -19,7 +19,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
       const timer = setTimeout(() => {
         setDisplayLocation(location);
         setIsVisible(true);
-      }, 900); // Half of the 1800ms transition
+      }, 1200); // Half of the 2400ms transition
 
       return () => clearTimeout(timer);
     } else {
@@ -30,7 +30,7 @@ const PageTransition = ({ children }: PageTransitionProps) => {
 
   return (
     <div
-      className={`transition-all duration-[1800ms] ease-in-out transform ${
+      className={`transition-all duration-[2400ms] ease-in-out transform ${
         isVisible 
           ? "opacity-100 translate-y-0" 
           : "opacity-0 translate-y-2"

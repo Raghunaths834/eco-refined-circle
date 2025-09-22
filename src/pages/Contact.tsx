@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -5,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { 
   Phone, 
   Mail, 
@@ -19,6 +22,81 @@ import {
 } from "lucide-react";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    company: "",
+    email: "",
+    phone: "",
+    service: "",
+    volume: "",
+    message: ""
+  });
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Basic validation
+    if (!formData.firstName || !formData.lastName || !formData.company || !formData.email) {
+      toast({
+        title: "Validation Error",
+        description: "Please fill in all required fields.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone || null,
+          service: formData.service || null,
+          volume: formData.volume || null,
+          message: formData.message || null
+        });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        company: "",
+        email: "",
+        phone: "",
+        service: "",
+        volume: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const contactInfo = [
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
@@ -117,7 +195,7 @@ const Contact = () => {
 
               <Card className="bg-gradient-card border-0 shadow-soft">
                 <CardContent className="p-6">
-                  <form className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="firstName">First Name *</Label>
@@ -125,6 +203,9 @@ const Contact = () => {
                           id="firstName" 
                           placeholder="John" 
                           className="bg-background"
+                          value={formData.firstName}
+                          onChange={(e) => handleInputChange("firstName", e.target.value)}
+                          required
                         />
                       </div>
                       <div className="space-y-2">
@@ -133,6 +214,9 @@ const Contact = () => {
                           id="lastName" 
                           placeholder="Smith" 
                           className="bg-background"
+                          value={formData.lastName}
+                          onChange={(e) => handleInputChange("lastName", e.target.value)}
+                          required
                         />
                       </div>
                     </div>
@@ -143,6 +227,9 @@ const Contact = () => {
                         id="company" 
                         placeholder="Your Company Name" 
                         className="bg-background"
+                        value={formData.company}
+                        onChange={(e) => handleInputChange("company", e.target.value)}
+                        required
                       />
                     </div>
 
@@ -154,6 +241,9 @@ const Contact = () => {
                           type="email" 
                           placeholder="john@company.com" 
                           className="bg-background"
+                          value={formData.email}
+                          onChange={(e) => handleInputChange("email", e.target.value)}
+                          required
                         />
                       </div>
                       <div className="space-y-2">
@@ -163,13 +253,15 @@ const Contact = () => {
                           type="tel" 
                           placeholder="+1 (555) 123-4567" 
                           className="bg-background"
+                          value={formData.phone}
+                          onChange={(e) => handleInputChange("phone", e.target.value)}
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="service">Service Interested In</Label>
-                      <Select>
+                      <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
                         <SelectTrigger className="bg-background">
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
@@ -185,7 +277,7 @@ const Contact = () => {
 
                     <div className="space-y-2">
                       <Label htmlFor="volume">Estimated Monthly Oil Volume</Label>
-                      <Select>
+                      <Select value={formData.volume} onValueChange={(value) => handleInputChange("volume", value)}>
                         <SelectTrigger className="bg-background">
                           <SelectValue placeholder="Select volume range" />
                         </SelectTrigger>
@@ -204,12 +296,18 @@ const Contact = () => {
                         id="message" 
                         placeholder="Tell us about your specific needs and requirements..."
                         className="bg-background min-h-[120px]"
+                        value={formData.message}
+                        onChange={(e) => handleInputChange("message", e.target.value)}
                       />
                     </div>
 
-                    <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-primary hover:bg-primary/90"
+                      disabled={isSubmitting}
+                    >
                       <Send className="h-4 w-4 mr-2" />
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
                 </CardContent>

@@ -50,34 +50,19 @@ const About = () => {
 
   const timeline = [
     {
-      year: "2009",
+      year: "2017",
       title: "Company Founded",
       description: "Started with a vision to revolutionize oil recycling in our region"
     },
     {
-      year: "2012", 
+      year: "2019", 
       title: "Facility Expansion",
       description: "Expanded processing capacity and upgraded to advanced recycling technology"
     },
     {
-      year: "2015",
+      year: "2024",
       title: "ISO Certification",
       description: "Achieved ISO 14001 certification for environmental management systems"
-    },
-    {
-      year: "2018",
-      title: "Regional Leadership", 
-      description: "Became the leading oil recycling facility in the tri-state area"
-    },
-    {
-      year: "2021",
-      title: "Technology Innovation",
-      description: "Implemented cutting-edge purification technology increasing efficiency to 98%"
-    },
-    {
-      year: "2024",
-      title: "Sustainable Future",
-      description: "Continuing to lead in sustainable practices and environmental responsibility"
     }
   ];
 

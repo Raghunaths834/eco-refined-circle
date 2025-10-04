@@ -88,14 +88,14 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="outline" className="mb-6">
-              About EcoOil Solutions
+              About GS Lubricant
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Leading the Future of 
               <span className="text-primary block mt-2">Sustainable Oil Recycling</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              For over 15 years, we've been transforming waste oil into valuable resources, 
+              For over 7 years, we've been transforming waste oil into valuable resources, 
               protecting the environment while serving businesses across the region with 
               reliable, certified recycling solutions.
             </p>
@@ -197,7 +197,7 @@ const About = () => {
                   </div>
                   <div className="lg:col-span-2">
                     <blockquote className="text-lg text-muted-foreground leading-relaxed italic">
-                      "At EcoOil Solutions, we believe that environmental responsibility and business success go hand in hand. 
+                      "At GS Lubricant, we believe that environmental responsibility and business success go hand in hand.
                       Our commitment to sustainable oil recycling isn't just about compliance—it's about creating a legacy 
                       for future generations. Every gallon of oil we process represents our dedication to turning waste into 
                       valuable resources while protecting our planet. We're proud to partner with businesses who share our 
@@ -255,7 +255,7 @@ const About = () => {
               Our Journey
             </Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              15+ Years of Environmental Leadership
+              7+ Years of Environmental Leadership
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               From humble beginnings to industry leadership, our story is one of continuous 

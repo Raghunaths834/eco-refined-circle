@@ -37,7 +37,7 @@ const Index = () => {
     {
       icon: <Award className="h-8 w-8 text-accent" />,
       title: "Industry Leader",
-      description: "Over 15 years of experience in sustainable oil recycling and waste management."
+      description: "Over 7 years of experience in sustainable oil recycling and waste management."
     }
   ];
 
@@ -46,7 +46,7 @@ const Index = () => {
     { number: "600", label: "Tons/Year Authorized Oil Recycling", icon: <Gauge className="h-6 w-6" /> },
     { number: "100%", label: "Regulatory Compliance", icon: <Shield className="h-6 w-6" /> },
     { number: "98%", label: "Recovery Rate", icon: <Recycle className="h-6 w-6" /> },
-    { number: "15+", label: "Years Experience", icon: <Globe className="h-6 w-6" /> }
+    { number: "7+", label: "Years Experience", icon: <Globe className="h-6 w-6" /> }
   ];
 
   const benefits = [

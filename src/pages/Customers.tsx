@@ -22,7 +22,7 @@ const Customers = () => {
       company: "Metro Manufacturing Corp",
       rating: 5,
       image: "SJ",
-      testimonial: "EcoOil Solutions has been our trusted partner for over 5 years. Their reliable collection service and quality recycled products have helped us achieve our sustainability goals while reducing costs.",
+      testimonial: "GS Lubricant has been our trusted partner for over 5 years. Their reliable collection service and quality recycled products have helped us achieve our sustainability goals while reducing costs.",
       industry: "Manufacturing"
     },
     {
@@ -40,7 +40,7 @@ const Customers = () => {
       company: "Industrial Solutions LLC",
       rating: 5,
       image: "AR",
-      testimonial: "Working with EcoOil Solutions has been a game-changer. Their custom collection schedule fits our operations perfectly, and the quality of their recycled products is exceptional.",
+      testimonial: "Working with GS Lubricant has been a game-changer. Their custom collection schedule fits our operations perfectly, and the quality of their recycled products is exceptional.",
       industry: "Industrial"
     },
     {
@@ -58,7 +58,7 @@ const Customers = () => {
       company: "Coastal Marine Services",
       rating: 5,
       image: "LP",
-      testimonial: "EcoOil Solutions helped us implement a comprehensive waste oil management program. Their expertise and reliable service have been invaluable to our environmental initiatives.",
+      testimonial: "GS Lubricant helped us implement a comprehensive waste oil management program. Their expertise and reliable service have been invaluable to our environmental initiatives.",
       industry: "Marine"
     },
     {
@@ -142,7 +142,7 @@ const Customers = () => {
               <div className="text-muted-foreground">Customer Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">15+</div>
+              <div className="text-4xl font-bold text-accent mb-2">7+</div>
               <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
@@ -165,7 +165,7 @@ const Customers = () => {
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Don't just take our word for it. Here's what our customers have to say 
-              about their experience working with EcoOil Solutions.
+              about their experience working with GS Lubricant.
             </p>
           </div>
 
@@ -331,7 +331,7 @@ const Customers = () => {
               Ready to Join Our Success Stories?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Discover how EcoOil Solutions can help your business achieve its sustainability 
+              Discover how GS Lubricant can help your business achieve its sustainability 
               goals while reducing costs and ensuring compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

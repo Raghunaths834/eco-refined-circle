@@ -107,7 +107,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6 text-secondary" />,
       title: "Email", 
-      details: ["info@ecooilsolutions.com", "sales@ecooilsolutions.com"],
+      details: ["info@gslubricant.com", "sales@gslubricant.com"],
       description: "Send us a message anytime"
     },
     {

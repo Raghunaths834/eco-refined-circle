@@ -197,7 +197,7 @@ const About = () => {
                   </div>
                   <div className="lg:col-span-2">
                     <blockquote className="text-lg text-muted-foreground leading-relaxed italic">
-                      "At GS Lubricant, we believe that environmental responsibility and business success go hand in hand.
+                      "At GS Lubricants, we believe that environmental responsibility and business success go hand in hand.
                       Our commitment to sustainable oil recycling isn't just about compliance—it's about creating a legacy 
                       for future generations. Every gallon of oil we process represents our dedication to turning waste into 
                       valuable resources while protecting our planet. We're proud to partner with businesses who share our 

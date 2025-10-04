@@ -191,7 +191,7 @@ const About = () => {
                       <Users className="h-16 w-16 text-primary" />
                     </div>
                     <div className="text-center">
-                      <h3 className="text-xl font-bold text-foreground mb-2">John Mitchell</h3>
+                      <h3 className="text-xl font-bold text-foreground mb-2">Muna Pani</h3>
                       <p className="text-primary font-semibold">General Manager</p>
                     </div>
                   </div>
@@ -205,7 +205,7 @@ const About = () => {
                     </blockquote>
                     <div className="mt-6 flex items-center space-x-2 text-primary">
                       <div className="w-12 h-0.5 bg-primary"></div>
-                      <span className="font-semibold">John Mitchell</span>
+                      <span className="font-semibold">Muna Pani</span>
                     </div>
                   </div>
                 </div>

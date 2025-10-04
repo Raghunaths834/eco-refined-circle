@@ -65,8 +65,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-primary-foreground/80">
-                  <p>123 Industrial Drive</p>
-                  <p>Green Valley, ST 12345</p>
+                  <p>Plot No. 3936, Gurujang Village</p>
+                  <p>Talcher Sadar, Anugul, Odisha, India, 759100</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">

@@ -113,7 +113,7 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6 text-accent" />,
       title: "Address",
-      details: ["123 Industrial Drive", "Green Valley, ST 12345"],
+      details: ["Plot No. 3936, Gurujang Village", "Talcher Sadar, Anugul, Odisha, India, 759100"],
       description: "Visit our facility"
     },
     {
@@ -337,7 +337,7 @@ const Contact = () => {
                       <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
                       <h3 className="text-lg font-semibold text-foreground mb-2">Interactive Map</h3>
                       <p className="text-muted-foreground">
-                        123 Industrial Drive, Green Valley, ST 12345
+                        Plot No. 3936, Gurujang Village, Talcher Sadar, Anugul, Odisha, India, 759100
                       </p>
                       <Button variant="outline" className="mt-4">
                         Open in Google Maps

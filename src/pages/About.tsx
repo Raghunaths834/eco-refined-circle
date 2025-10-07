@@ -170,29 +170,16 @@ const About = () => {
             
             <Card className="bg-gradient-card border-0 shadow-medium">
               <CardContent className="p-8 lg:p-12">
-                <div className="grid lg:grid-cols-3 gap-8 items-center">
-                  <div className="lg:col-span-1">
-                    <div className="bg-primary/20 p-8 rounded-full w-32 h-32 mx-auto flex items-center justify-center mb-6">
-                      <Users className="h-16 w-16 text-primary" />
-                    </div>
-                    <div className="text-center">
-                      <h3 className="text-xl font-bold text-foreground mb-2">Muna Pani</h3>
-                      <p className="text-primary font-semibold">General Manager</p>
-                    </div>
-                  </div>
-                  <div className="lg:col-span-2">
-                    <blockquote className="text-lg text-muted-foreground leading-relaxed italic">
-                      "At GS Lubricants, we believe that environmental responsibility and business success go hand in hand.
-                      Our commitment to sustainable oil recycling isn't just about compliance—it's about creating a legacy 
-                      for future generations. Every gallon of oil we process represents our dedication to turning waste into 
-                      valuable resources while protecting our planet. We're proud to partner with businesses who share our 
-                      vision of a more sustainable future."
-                    </blockquote>
-                    <div className="mt-6 flex items-center space-x-2 text-primary">
-                      <div className="w-12 h-0.5 bg-primary"></div>
-                      <span className="font-semibold">Muna Pani</span>
-                    </div>
-                  </div>
+                <blockquote className="text-lg text-muted-foreground leading-relaxed italic mb-8">
+                  "At GS Lubricants, we believe that environmental responsibility and business success go hand in hand.
+                  Our commitment to sustainable oil recycling isn't just about compliance—it's about creating a legacy 
+                  for future generations. Every gallon of oil we process represents our dedication to turning waste into 
+                  valuable resources while protecting our planet. We're proud to partner with businesses who share our 
+                  vision of a more sustainable future."
+                </blockquote>
+                <div className="flex items-center space-x-2 text-primary">
+                  <div className="w-12 h-0.5 bg-primary"></div>
+                  <span className="font-semibold">Muna Pani, General Manager</span>
                 </div>
               </CardContent>
             </Card>

@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import Map from "@/components/Map";
 import { 
   Phone, 
   Mail, 
@@ -329,21 +330,10 @@ const Contact = () => {
                 </p>
               </div>
 
-              {/* Map Placeholder */}
+              {/* Map */}
               <Card className="bg-gradient-card border-0 shadow-soft">
-                <CardContent className="p-0">
-                  <div className="bg-muted h-80 rounded-lg flex items-center justify-center relative overflow-hidden">
-                    <div className="text-center">
-                      <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                      <h3 className="text-lg font-semibold text-foreground mb-2">Interactive Map</h3>
-                      <p className="text-muted-foreground">
-                        Plot No. 3936, Gurujang Village, Talcher Sadar, Anugul, Odisha, India, 759100
-                      </p>
-                      <Button variant="outline" className="mt-4">
-                        Open in Google Maps
-                      </Button>
-                    </div>
-                  </div>
+                <CardContent className="p-4">
+                  <Map />
                 </CardContent>
               </Card>
 

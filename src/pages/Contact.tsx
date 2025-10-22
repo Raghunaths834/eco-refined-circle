@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -21,6 +22,41 @@ import {
   AlertCircle
 } from "lucide-react";
 
+// Validation schema for contact form
+const contactSchema = z.object({
+  firstName: z.string()
+    .trim()
+    .min(1, "First name is required")
+    .max(50, "First name must be less than 50 characters")
+    .regex(/^[a-zA-Z\s'-]+$/, "Invalid characters in first name"),
+  lastName: z.string()
+    .trim()
+    .min(1, "Last name is required")
+    .max(50, "Last name must be less than 50 characters")
+    .regex(/^[a-zA-Z\s'-]+$/, "Invalid characters in last name"),
+  company: z.string()
+    .trim()
+    .min(1, "Company name is required")
+    .max(100, "Company name must be less than 100 characters"),
+  email: z.string()
+    .trim()
+    .email("Invalid email address")
+    .max(255, "Email must be less than 255 characters"),
+  phone: z.string()
+    .trim()
+    .max(20, "Phone number must be less than 20 characters")
+    .regex(/^[+\d\s()-]*$/, "Invalid phone number format")
+    .optional()
+    .or(z.literal('')),
+  service: z.string().max(50).optional().or(z.literal('')),
+  volume: z.string().max(50).optional().or(z.literal('')),
+  message: z.string()
+    .trim()
+    .max(2000, "Message must be less than 2000 characters")
+    .optional()
+    .or(z.literal(''))
+});
+
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -42,11 +78,12 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Basic validation
-    if (!formData.firstName || !formData.lastName || !formData.company || !formData.email) {
+    // Validate form data with Zod schema
+    const validation = contactSchema.safeParse(formData);
+    if (!validation.success) {
       toast({
         title: "Validation Error",
-        description: "Please fill in all required fields.",
+        description: validation.error.errors[0].message,
         variant: "destructive"
       });
       return;
@@ -55,17 +92,18 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
+      const validatedData = validation.data;
       const { error } = await supabase
         .from('contact_submissions')
         .insert({
-          first_name: formData.firstName,
-          last_name: formData.lastName,
-          company: formData.company,
-          email: formData.email,
-          phone: formData.phone || null,
-          service: formData.service || null,
-          volume: formData.volume || null,
-          message: formData.message || null
+          first_name: validatedData.firstName,
+          last_name: validatedData.lastName,
+          company: validatedData.company,
+          email: validatedData.email,
+          phone: validatedData.phone || null,
+          service: validatedData.service || null,
+          volume: validatedData.volume || null,
+          message: validatedData.message || null
         });
 
       if (error) throw error;

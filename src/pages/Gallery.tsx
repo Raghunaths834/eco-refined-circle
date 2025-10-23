@@ -98,45 +98,6 @@ const Gallery = () => {
     { name: "Process", count: galleryItems.filter(item => item.category === "Process").length, active: false }
   ];
 
-  const processSteps = [
-    {
-      step: "1",
-      title: "Collection",
-      description: "Professional collection of used oil from customer facilities using specialized equipment.",
-      icon: <Truck className="h-6 w-6" />
-    },
-    {
-      step: "2", 
-      title: "Filtering",
-      description: "Initial filtration removes large contaminants and debris from the waste oil.",
-      icon: <Factory className="h-6 w-6" />
-    },
-    {
-      step: "3",
-      title: "Distillation", 
-      description: "Advanced distillation process separates oil components at precise temperatures.",
-      icon: <Factory className="h-6 w-6" />
-    },
-    {
-      step: "4",
-      title: "Purification",
-      description: "Final purification removes remaining impurities to achieve premium quality.",
-      icon: <Factory className="h-6 w-6" />
-    },
-    {
-      step: "5",
-      title: "Quality Testing",
-      description: "Comprehensive laboratory testing ensures products meet all specifications.",
-      icon: <Eye className="h-6 w-6" />
-    },
-    {
-      step: "6",
-      title: "Distribution",
-      description: "Finished products are packaged and distributed to customers nationwide.",
-      icon: <Truck className="h-6 w-6" />
-    }
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -219,43 +180,6 @@ const Gallery = () => {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Overview */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">
-              Our Process
-            </Badge>
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              From Waste Oil to Premium Products
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our comprehensive recycling process transforms waste oil into high-quality 
-              products through advanced technology and rigorous quality control.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {processSteps.map((step, index) => (
-              <Card key={index} className="bg-background border-0 shadow-soft hover:shadow-medium transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className="bg-primary text-primary-foreground rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">
-                      {step.step}
-                    </div>
-                    <div className="bg-muted p-3 rounded-lg text-primary">
-                      {step.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">{step.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                 </CardContent>
               </Card>
             ))}

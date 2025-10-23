@@ -21,9 +21,19 @@ const Footer = () => {
               Leading the way in sustainable oil recycling with advanced technology and 
               environmental responsibility for a cleaner future.
             </p>
-            <div className="flex items-center space-x-2 text-sm">
-              <Shield className="h-4 w-4 text-success" />
-              <span className="text-primary-foreground/80">ISO 14001 Certified</span>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-2 text-sm">
+                <Shield className="h-4 w-4 text-success" />
+                <span className="text-primary-foreground/80">ISO 14001 Certified</span>
+              </div>
+              <a 
+                href="https://services.gst.gov.in/services/searchtp" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm text-primary-foreground/80 hover:text-accent transition-colors inline-block"
+              >
+                GSTIN: 21AAJFG6323M1ZE
+              </a>
             </div>
           </div>
 

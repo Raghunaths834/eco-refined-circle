@@ -25,18 +25,19 @@ jobs:
       - name: List build output
         run: ls -la dist
       
-      - name: Deploy dist/ to Hostinger
+      - name: Deploy build folder to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_HOST }}     # just the IP/host (no ftp://)
+          server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
           protocol: ftp
           local-dir: ./dist/
-          server-dir: public_html/            # <-- NOTE: no leading slash, not ./
+          server-dir: ./            # <-- CHANGE THIS (was: public_html/)
           dangerous-clean-slate: true
           log-level: verbose
+
 
 
 

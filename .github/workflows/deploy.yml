@@ -24,17 +24,18 @@ jobs:
 
       - name: List build output
         run: ls -la dist
-
-      - name: Deploy dist/ to Hostinger public_html
+      
+      - name: Deploy dist/ to Hostinger root
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_HOST }}      # host/IP ONLY (no ftp://)
+          server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}        # 21
+          port: ${{ secrets.FTP_PORT }}
           protocol: ftp
-          local-dir: ./dist/                   # <-- trailing slash
-          server-dir: /public_html/            # <-- trailing slash
+          local-dir: ./dist/   # MUST end with /
+          server-dir: ./       # <— root of your FTP account (which is public_html)
           dangerous-clean-slate: true
+
 
 

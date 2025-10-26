@@ -17,56 +17,56 @@ import {
 const Customers = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Rajesh Patel",
       title: "Environmental Manager",
-      company: "Metro Manufacturing Corp",
+      company: "Rourkela Steel Industries",
       rating: 5,
-      image: "SJ",
+      image: "RP",
       testimonial: "GS Lubricant has been our trusted partner for over 5 years. Their reliable collection service and quality recycled products have helped us achieve our sustainability goals while reducing costs.",
       industry: "Manufacturing"
     },
     {
-      name: "Michael Chen",
+      name: "Amit Kumar Singh",
       title: "Fleet Operations Director", 
-      company: "TransLogistics Inc",
+      company: "Jamshedpur Transport & Logistics",
       rating: 5,
-      image: "MC",
+      image: "AK",
       testimonial: "The team's professionalism and attention to detail is outstanding. They handle all our used oil disposal needs efficiently, and their documentation helps us maintain full compliance.",
       industry: "Transportation"
     },
     {
-      name: "Amanda Rodriguez",
+      name: "Priya Sharma",
       title: "Facility Manager",
-      company: "Industrial Solutions LLC",
+      company: "Bhubaneswar Industrial Solutions",
       rating: 5,
-      image: "AR",
+      image: "PS",
       testimonial: "Working with GS Lubricant has been a game-changer. Their custom collection schedule fits our operations perfectly, and the quality of their recycled products is exceptional.",
       industry: "Industrial"
     },
     {
-      name: "David Thompson",
+      name: "Sanjay Das",
       title: "Operations Manager",
-      company: "GreenTech Automotive",
+      company: "Kolkata Automotive Pvt Ltd",
       rating: 5,
-      image: "DT",
+      image: "SD",
       testimonial: "Their commitment to environmental responsibility aligns perfectly with our values. The team provides excellent service and their recycled oils perform as well as virgin products.",
       industry: "Automotive"
     },
     {
-      name: "Lisa Park",
+      name: "Kavita Mohanty",
       title: "Sustainability Director",
-      company: "Coastal Marine Services",
+      company: "Paradip Port Services",
       rating: 5,
-      image: "LP",
+      image: "KM",
       testimonial: "GS Lubricant helped us implement a comprehensive waste oil management program. Their expertise and reliable service have been invaluable to our environmental initiatives.",
       industry: "Marine"
     },
     {
-      name: "Robert Williams",
+      name: "Deepak Mishra",
       title: "Plant Manager",
-      company: "Precision Manufacturing",
+      company: "Cuttack Precision Manufacturing",
       rating: 5,
-      image: "RW",
+      image: "DM",
       testimonial: "The consistency and quality of their service is remarkable. They've never missed a pickup, and their recycled lubricants have exceeded our performance expectations.",
       industry: "Manufacturing"
     }

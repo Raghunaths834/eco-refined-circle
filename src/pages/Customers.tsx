@@ -16,7 +16,7 @@ import {
 
 const Customers = () => {
   const testimonials = [
-    {
+    /*{
       name: "Sarah Johnson",
       title: "Environmental Manager",
       company: "Metro Manufacturing Corp",
@@ -24,7 +24,7 @@ const Customers = () => {
       image: "SJ",
       testimonial: "GS Lubricant has been our trusted partner for over 5 years. Their reliable collection service and quality recycled products have helped us achieve our sustainability goals while reducing costs.",
       industry: "Manufacturing"
-    },
+    },*/
     {
       name: "Michael Chen",
       title: "Fleet Operations Director", 

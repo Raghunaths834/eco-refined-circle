@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Recycle, Phone, Mail, MapPin, Clock, Shield } from "lucide-react";
+import { Recycle, Phone, Mail, MapPin, Clock, Shield, ExternalLink } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -30,9 +30,10 @@ const Footer = () => {
                 href="https://services.gst.gov.in/services/searchtp" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-sm text-primary-foreground/80 hover:text-accent transition-colors inline-block"
+                className="text-sm text-primary-foreground/80 hover:text-accent transition-colors inline-flex items-center gap-1"
               >
                 GSTIN: 21AAJFG6323M1ZE
+                <ExternalLink className="h-3 w-3" />
               </a>
             </div>
           </div>

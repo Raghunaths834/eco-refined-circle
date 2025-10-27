@@ -407,51 +407,11 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Emergency Contact */}
-              <Card className="bg-gradient-card border-0 shadow-soft border-l-4 border-l-accent">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-accent/20 p-3 rounded-lg">
-                      <AlertCircle className="h-6 w-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-2">Emergency Services</h3>
-                      <p className="text-muted-foreground mb-3">
-                        24/7 emergency response for oil spills and environmental incidents.
-                      </p>
-                      <Button variant="outline" size="sm">
-                        <Phone className="h-4 w-4 mr-2" />
-                        Call Emergency Line
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
       </section>
 
-      {/* WhatsApp & Social */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-foreground mb-6">
-              Connect With Us
-            </h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="outline" className="flex items-center space-x-2">
-                <MessageSquare className="h-4 w-4" />
-                <span>WhatsApp: +1 (555) 123-WHATSAPP</span>
-              </Button>
-              <Button variant="outline" className="flex items-center space-x-2">
-                <Mail className="h-4 w-4" />
-                <span>Email Newsletter</span>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-hero text-center">

@@ -139,13 +139,13 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: "Phone",
-      details: ["+1 (555) 123-4567", "+1 (555) 123-4568 (Emergency)"],
+      details: ["+918908094205"],
       description: "Call us for immediate assistance"
     },
     {
       icon: <Mail className="h-6 w-6 text-secondary" />,
       title: "Email", 
-      details: ["info@gslubricant.com", "sales@gslubricant.com"],
+      details: ["gslubricantsodisha@gmail.com"],
       description: "Send us a message anytime"
     },
     {

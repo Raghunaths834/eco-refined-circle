@@ -282,8 +282,8 @@ const Terms = () => {
                     <p><strong>M/S Gouri Shankar Lubricants</strong></p>
                     <p>Plot No. 3936, Gurujang Village</p>
                     <p>Talcher Sadar, Anugul, Odisha, India, 759100</p>
-                    <p>Phone: +917008262039</p>
-                    <p>Email: info@gslubricants.com</p>
+                    <p>Phone: +918908094205</p>
+                    <p>Email: gslubricantsodisha@gmail.com</p>
                     <p>GSTIN: 21AAJFG6323M1ZE</p>
                   </div>
                 </div>

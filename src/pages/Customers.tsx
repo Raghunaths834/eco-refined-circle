@@ -153,8 +153,8 @@ const Customers = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-background">
+      {/* Testimonials - HIDDEN (can be restored later) */}
+      {/* <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
@@ -205,7 +205,7 @@ const Customers = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Industries Served */}
       <section className="py-20 bg-muted/30">

@@ -50,9 +50,6 @@ const Footer = () => {
               <Link to="/customers" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
                 Customer Stories
               </Link>
-              <Link to="/gallery" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                Gallery
-              </Link>
             </nav>
           </div>
 

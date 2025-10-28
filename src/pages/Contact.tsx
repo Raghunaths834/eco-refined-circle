@@ -420,19 +420,10 @@ const Contact = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90">
               Join hundreds of businesses who trust us with their oil recycling needs. 
               Contact us today for a free consultation and custom quote.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                <Phone className="h-5 w-5 mr-2" />
-                Call Now: (555) 123-4567
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20">
-                Schedule Facility Tour
-              </Button>
-            </div>
           </div>
         </div>
       </section>

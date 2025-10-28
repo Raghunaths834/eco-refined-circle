@@ -77,25 +77,25 @@ const Customers = () => {
       icon: <Factory className="h-8 w-8 text-primary" />,
       name: "Manufacturing",
       description: "Industrial facilities, machinery maintenance, and production operations",
-      clients: "6+"
+      clients: "9+"
     },
     {
       icon: <Truck className="h-8 w-8 text-secondary" />,
       name: "Transportation",
       description: "Fleet operations, logistics companies, and commercial vehicle services",
-      clients: "3+"
+      clients: "5+"
     },
     {
       icon: <Building className="h-8 w-8 text-accent" />,
       name: "Commercial",
       description: "Office buildings, retail centers, and commercial property management",
-      clients: "8+"
+      clients: "12+"
     },
     {
       icon: <Users className="h-8 w-8 text-eco-green" />,
       name: "Government",
       description: "Municipal facilities, public works, and government fleet operations",
-      clients: "1+"
+      clients: "4+"
     }
   ];
 
@@ -119,7 +119,7 @@ const Customers = () => {
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Trusted by 
-              <span className="text-primary block mt-2">20+ Businesses</span>
+              <span className="text-primary block mt-2">30+ Businesses</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               From small businesses to large corporations, our customers rely on us for 
@@ -134,7 +134,7 @@ const Customers = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">20+</div>
+              <div className="text-4xl font-bold text-primary mb-2">30+</div>
               <div className="text-muted-foreground">Active Clients</div>
             </div>
             <div className="text-center">

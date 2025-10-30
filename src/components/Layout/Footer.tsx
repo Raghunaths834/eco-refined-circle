@@ -48,9 +48,6 @@ const Footer = () => {
               <Link to="/products" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
                 Our Products
               </Link>
-              <Link to="/customers" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                Customer Stories
-              </Link>
             </nav>
           </div>
 

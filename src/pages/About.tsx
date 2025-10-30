@@ -296,7 +296,7 @@ const About = () => {
                   <div className="bg-primary/20 p-6 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center">
                     <Building className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4">State-of-the-Art Facility</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Modern Processing Infrastructure</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     Our 50,000 sq ft facility features advanced recycling technology, 
                     environmental monitoring systems, and comprehensive safety protocols.

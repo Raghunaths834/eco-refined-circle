@@ -20,7 +20,7 @@ const Gallery = () => {
       type: "image",
       title: "Main Processing Facility",
       category: "Facility",
-      description: "Our state-of-the-art 50,000 sq ft oil recycling facility with advanced processing equipment.",
+      description: "Our state-of-the-art oil recycling facility with advanced processing equipment.",
       image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
       featured: true
     },
@@ -258,10 +258,6 @@ const Gallery = () => {
                     the highest standards of quality and environmental responsibility.
                   </p>
                   <div className="grid grid-cols-2 gap-4 text-center">
-                    <div>
-                      <div className="text-2xl font-bold text-primary">50K+</div>
-                      <div className="text-sm text-muted-foreground">Sq Ft Facility</div>
-                    </div>
                     <div>
                       <div className="text-2xl font-bold text-secondary">98%</div>
                       <div className="text-sm text-muted-foreground">Recovery Rate</div>

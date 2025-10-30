@@ -298,14 +298,10 @@ const About = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-4">Modern Processing Infrastructure</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Our 50,000 sq ft facility features advanced recycling technology, 
+                    Our facility features advanced recycling technology, 
                     environmental monitoring systems, and comprehensive safety protocols.
                   </p>
                   <div className="grid grid-cols-2 gap-4 text-center">
-                    <div>
-                      <div className="text-2xl font-bold text-primary">50K+</div>
-                      <div className="text-sm text-muted-foreground">Sq Ft Facility</div>
-                    </div>
                     <div>
                       <div className="text-2xl font-bold text-primary">24/7</div>
                       <div className="text-sm text-muted-foreground">Monitoring</div>

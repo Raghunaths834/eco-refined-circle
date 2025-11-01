@@ -410,12 +410,9 @@ const Products = () => {
               Our technical team can develop custom formulations to meet your specific 
               application requirements. Contact us to discuss your needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
                 <Link to="/contact">Get Custom Quote</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
-                <Link to="/gallery">View Our Facility</Link>
               </Button>
             </div>
           </div>

@@ -141,7 +141,7 @@ const Products = () => {
     {
       icon: <Factory className="h-6 w-6 text-secondary" />,
       title: "Processing & Refining",
-      description: "Advanced processing using state-of-the-art technology to ensure highest quality output."
+      description: "Efficient processing using proven technology to deliver reliable, quality results."
     },
     {
       icon: <FlaskConical className="h-6 w-6 text-accent" />,

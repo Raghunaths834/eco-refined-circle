@@ -43,9 +43,7 @@ const About = () => {
   const certifications = [
     "ISO 14001 Environmental Management",
     "EPA Certified Recycling Facility", 
-    "State Environmental License",
-    "OSHA Safety Compliance",
-    "DOT Hazardous Materials Certification"
+    "State Environmental License"
   ];
 
   const timeline = [
@@ -301,8 +299,8 @@ const About = () => {
                     Our facility features advanced recycling technology, 
                     environmental monitoring systems, and comprehensive safety protocols.
                   </p>
-                  <div className="grid grid-cols-2 gap-4 text-center">
-                    <div>
+                  <div className="flex justify-center">
+                    <div className="text-center">
                       <div className="text-2xl font-bold text-primary">24/7</div>
                       <div className="text-sm text-muted-foreground">Monitoring</div>
                     </div>

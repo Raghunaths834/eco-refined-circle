@@ -2,6 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO/SEO";
+import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 import { 
   Camera, 
   Play, 
@@ -100,6 +102,13 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Gallery - Facility Photos & Videos"
+        description="Explore GS Lubricants' state-of-the-art oil recycling facility. View photos and videos of our advanced processing equipment, collection fleet, and sustainability initiatives."
+        keywords="oil recycling facility photos, waste oil processing videos, recycling plant gallery, industrial lubricant facility"
+        canonical="https://www.gslubricants.com/gallery"
+      />
+      <Breadcrumbs />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-section">
         <div className="container mx-auto px-4">

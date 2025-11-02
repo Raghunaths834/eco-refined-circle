@@ -2,10 +2,19 @@ import { ArrowLeft, Shield, Lock, Eye, Database, Mail, Globe } from "lucide-reac
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PageTransition from "@/components/Layout/PageTransition";
+import SEO from "@/components/SEO/SEO";
+import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 
 const Privacy = () => {
   return (
     <PageTransition>
+      <SEO 
+        title="Privacy Policy - Data Protection & Security"
+        description="Read GS Lubricants' privacy policy. Learn how we collect, use, and protect your personal information. We are committed to maintaining your privacy and data security."
+        keywords="privacy policy, data protection, information security, GDPR compliance"
+        canonical="https://www.gslubricants.com/privacy"
+      />
+      <Breadcrumbs />
       <div className="min-h-screen bg-background">
         {/* Header */}
         <section className="bg-gradient-primary text-primary-foreground py-20">

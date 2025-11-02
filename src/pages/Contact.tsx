@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import SEO from "@/components/SEO/SEO";
+import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 import { 
   Phone, 
   Mail, 
@@ -171,6 +173,13 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Contact Us - Get Your Free Quote Today"
+        description="Contact GS Lubricants for professional waste oil recycling services in Ahmedabad. Call +918908094205 or email us at gslubricantsodisha@gmail.com for a free consultation."
+        keywords="contact oil recycling Ahmedabad, waste oil collection quote, oil recycling consultation, GS Lubricants contact"
+        canonical="https://www.gslubricants.com/contact"
+      />
+      <Breadcrumbs />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-section">
         <div className="container mx-auto px-4">

@@ -2,6 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO/SEO";
+import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 import { 
   Star, 
   Quote, 
@@ -110,6 +112,13 @@ const Customers = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Our Customers - Trusted by 30+ Businesses"
+        description="GS Lubricants serves 30+ businesses across manufacturing, transportation, commercial, and government sectors. 99.8% customer satisfaction with reliable oil recycling services."
+        keywords="oil recycling clients, waste oil management customers, industrial oil recycling, commercial oil recycling"
+        canonical="https://www.gslubricants.com/customers"
+      />
+      <Breadcrumbs />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-section">
         <div className="container mx-auto px-4">

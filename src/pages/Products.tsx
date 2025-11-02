@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO/SEO";
+import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 import { 
   Fuel, 
   Wrench, 
@@ -155,8 +157,36 @@ const Products = () => {
     }
   ];
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": products.map((product, index) => ({
+      "@type": "Product",
+      "position": index + 1,
+      "name": product.title,
+      "description": product.description,
+      "brand": {
+        "@type": "Brand",
+        "name": "GS Lubricants"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "INR"
+      }
+    }))
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Recycled Oil Products & Services - Base Oils, Industrial Lubricants"
+        description="Premium recycled oil products including re-refined base oils, industrial lubricants, biofuels, and specialty fluids. API Group II standards, ISO certified processing, 98% recovery rate."
+        keywords="recycled base oil, re-refined oil, industrial lubricants, biofuel, specialty fluids, API Group II oil, sustainable lubricants"
+        canonical="https://www.gslubricants.com/products"
+        schemaData={productSchema}
+      />
+      <Breadcrumbs />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-section">
         <div className="container mx-auto px-4">

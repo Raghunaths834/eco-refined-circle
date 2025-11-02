@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO/SEO";
+import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 import { 
   Recycle, 
   Leaf, 
@@ -57,14 +59,53 @@ const Index = () => {
     "Professional collection and processing services"
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is waste oil recycling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Waste oil recycling is the process of collecting used oil from automotive and industrial sources and transforming it into high-quality base oils through advanced refining and purification processes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of oil can be recycled?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We recycle various types of used oils including motor oil, industrial lubricants, hydraulic fluids, gear oils, and transformer oils. Our facility is authorized to process 600 tons per year of waste oil."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is recycled oil safe and high quality?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our recycled base oils meet API Group II standards and undergo rigorous quality testing. We maintain a 98% recovery rate and achieve industry-leading quality through our ISO 14001 certified processes."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Professional Waste Oil Recycling & Base Oil Manufacturing"
+        description="Leading waste oil recycling facility in Ahmedabad. We transform used lubricants into high-quality base oils through sustainable refining processes. ISO certified, eco-friendly solutions."
+        keywords="waste oil recycling, base oil manufacturing, lubricant refining, oil recycling Ahmedabad, sustainable oil processing, automotive oil recycling, industrial lubricants"
+        canonical="https://www.gslubricants.com/"
+        schemaData={faqSchema}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-hero-animated bg-gradient-animated animate-gradient-wave overflow-hidden">
         <div className="absolute inset-0 bg-black/60" />
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-          style={{ backgroundImage: `url(${oilRecyclingBg})` }}
+        <img 
+          src={oilRecyclingBg}
+          alt="Modern waste oil recycling equipment and facility in Ahmedabad"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
         />
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-3xl">

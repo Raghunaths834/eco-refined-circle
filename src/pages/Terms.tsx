@@ -2,10 +2,19 @@ import { ArrowLeft, FileText, Scale, AlertTriangle, UserCheck, Package, Truck } 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import PageTransition from "@/components/Layout/PageTransition";
+import SEO from "@/components/SEO/SEO";
+import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 
 const Terms = () => {
   return (
     <PageTransition>
+      <SEO 
+        title="Terms & Conditions - Service Agreement"
+        description="Read GS Lubricants' terms and conditions. Understand our service agreements, policies, and guidelines for waste oil recycling services."
+        keywords="terms and conditions, service agreement, oil recycling terms, business policies"
+        canonical="https://www.gslubricants.com/terms"
+      />
+      <Breadcrumbs />
       <div className="min-h-screen bg-background">
         {/* Header */}
         <section className="bg-gradient-primary text-primary-foreground py-20">

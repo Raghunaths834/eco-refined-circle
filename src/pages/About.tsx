@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO/SEO";
+import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 import { 
   Recycle, 
   Leaf, 
@@ -66,6 +68,13 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="About Us - Leading Sustainable Oil Recycling Company"
+        description="Over 7 years of excellence in waste oil recycling. ISO 14001 certified facility in Ahmedabad with 98% recovery rate. Learn about our mission, values, and commitment to environmental sustainability."
+        keywords="oil recycling company, waste oil recycling facility Ahmedabad, ISO 14001 certified, sustainable lubricants, environmental management"
+        canonical="https://www.gslubricants.com/about"
+      />
+      <Breadcrumbs />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-section">
         <div className="container mx-auto px-4">

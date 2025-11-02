@@ -1,0 +1,22 @@
+# ai.txt — guidance for AI crawlers
+# See https://ai.txt for the emerging community standard
+
+User-agent: *
+Allow: /
+Sitemap: https://www.gslubricants.com/sitemap.xml
+
+# Explicit allowances for common AI crawlers
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /

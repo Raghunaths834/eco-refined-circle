@@ -10,5 +10,13 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# Explicitly allow Perplexity crawler
+User-agent: PerplexityBot
+Allow: /
+
+# Default allow for all other crawlers
 User-agent: *
 Allow: /
+
+# Sitemap reference
+Sitemap: https://www.gslubricants.com/sitemap.xml

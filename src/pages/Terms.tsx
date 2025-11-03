@@ -4,8 +4,11 @@ import { Button } from "@/components/ui/button";
 import PageTransition from "@/components/Layout/PageTransition";
 import SEO from "@/components/SEO/SEO";
 import Breadcrumbs from "@/components/SEO/Breadcrumbs";
+import { getSensitiveInfo } from "@/lib/privacy";
 
 const Terms = () => {
+  const sensitiveInfo = getSensitiveInfo();
+  
   return (
     <PageTransition>
       <SEO 
@@ -43,7 +46,7 @@ const Terms = () => {
               {/* Introduction */}
               <div className="bg-card p-6 rounded-lg border">
                 <p className="text-foreground">
-                  Welcome to M/S Gouri Shankar Lubricants ("GS Lubricants," "we," "us," or "our"). These Terms of Service 
+                  Welcome to {sensitiveInfo.companyFullName} ("GS Lubricants," "we," "us," or "our"). These Terms of Service 
                   ("Terms") govern your use of our website and services related to lubricant manufacturing, oil recycling, 
                   and waste oil management. By accessing our website or using our services, you agree to be bound by these Terms.
                 </p>
@@ -288,12 +291,12 @@ const Terms = () => {
                     For questions about these Terms of Service, please contact us:
                   </p>
                   <div className="space-y-2 text-muted-foreground">
-                    <p><strong>M/S Gouri Shankar Lubricants</strong></p>
-                    <p>Plot No. 3936, Gurujang Village</p>
-                    <p>Talcher Sadar, Anugul, Odisha, India, 759100</p>
-                    <p>Phone: +918908094205</p>
-                    <p>Email: gslubricantsodisha@gmail.com</p>
-                    <p>GSTIN: 21AAJFG6323M1ZE</p>
+                    <p><strong>{sensitiveInfo.companyFullName}</strong></p>
+                    <p>{sensitiveInfo.addressLine1}</p>
+                    {sensitiveInfo.addressLine2 && <p>{sensitiveInfo.addressLine2}</p>}
+                    <p>Phone: {sensitiveInfo.phone}</p>
+                    <p>Email: {sensitiveInfo.email}</p>
+                    {sensitiveInfo.gstin && <p>GSTIN: {sensitiveInfo.gstin}</p>}
                   </div>
                 </div>
               </div>

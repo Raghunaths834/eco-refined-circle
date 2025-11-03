@@ -4,8 +4,11 @@ import { Button } from "@/components/ui/button";
 import PageTransition from "@/components/Layout/PageTransition";
 import SEO from "@/components/SEO/SEO";
 import Breadcrumbs from "@/components/SEO/Breadcrumbs";
+import { getSensitiveInfo } from "@/lib/privacy";
 
 const Privacy = () => {
+  const sensitiveInfo = getSensitiveInfo();
+  
   return (
     <PageTransition>
       <SEO 
@@ -43,7 +46,7 @@ const Privacy = () => {
               {/* Introduction */}
               <div className="bg-card p-6 rounded-lg border">
                 <p className="text-foreground">
-                  M/S Gouri Shankar Lubricants ("GS Lubricants," "we," "us," or "our") is committed to protecting your privacy. 
+                  {sensitiveInfo.companyFullName} ("GS Lubricants," "we," "us," or "our") is committed to protecting your privacy. 
                   This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our 
                   website and use our services related to lubricant manufacturing, oil recycling, and waste oil management.
                 </p>
@@ -224,12 +227,12 @@ const Privacy = () => {
                     If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:
                   </p>
                   <div className="space-y-2 text-muted-foreground">
-                    <p><strong>M/S Gouri Shankar Lubricants</strong></p>
-                    <p>Plot No. 3936, Gurujang Village</p>
-                    <p>Talcher Sadar, Anugul, Odisha, India, 759100</p>
-                    <p>Phone: +918908094205</p>
-                    <p>Email: gslubricantsodisha@gmail.com</p>
-                    <p>GSTIN: 21AAJFG6323M1ZE</p>
+                    <p><strong>{sensitiveInfo.companyFullName}</strong></p>
+                    <p>{sensitiveInfo.addressLine1}</p>
+                    {sensitiveInfo.addressLine2 && <p>{sensitiveInfo.addressLine2}</p>}
+                    <p>Phone: {sensitiveInfo.phone}</p>
+                    <p>Email: {sensitiveInfo.email}</p>
+                    {sensitiveInfo.gstin && <p>GSTIN: {sensitiveInfo.gstin}</p>}
                   </div>
                 </div>
               </div>

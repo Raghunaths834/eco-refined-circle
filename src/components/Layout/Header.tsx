@@ -2,10 +2,12 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Recycle } from "lucide-react";
+import { getSensitiveInfo } from "@/lib/privacy";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const sensitiveInfo = getSensitiveInfo();
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -29,7 +31,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">GS Lubricants</h1>
-              <p className="text-xs text-muted-foreground">M/S Gouri Shankar Lubricants</p>
+              <p className="text-xs text-muted-foreground">{sensitiveInfo.companyFullName}</p>
             </div>
           </Link>
 

@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { Recycle, Phone, Mail, MapPin, Clock, Shield, ExternalLink } from "lucide-react";
+import { getSensitiveInfo, isPrivacyModeActive } from "@/lib/privacy";
 
 const Footer = () => {
+  const sensitiveInfo = getSensitiveInfo();
+  
   return (
     <footer className="bg-industrial-dark text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
@@ -14,7 +17,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold">GS Lubricants</h3>
-                <p className="text-sm text-primary-foreground/70">M/S Gouri Shankar Lubricants</p>
+                <p className="text-sm text-primary-foreground/70">{sensitiveInfo.companyFullName}</p>
               </div>
             </Link>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
@@ -26,15 +29,17 @@ const Footer = () => {
                 <Shield className="h-4 w-4 text-success" />
                 <span className="text-primary-foreground/80">ISO 14001 Certified</span>
               </div>
-              <a 
-                href="https://services.gst.gov.in/services/searchtp" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-sm text-primary-foreground/80 hover:text-accent transition-colors inline-flex items-center gap-1"
-              >
-                GSTIN: 21AAJFG6323M1ZE
-                <ExternalLink className="h-3 w-3" />
-              </a>
+              {sensitiveInfo.gstin && (
+                <a 
+                  href="https://services.gst.gov.in/services/searchtp" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary-foreground/80 hover:text-accent transition-colors inline-flex items-center gap-1"
+                >
+                  GSTIN: {sensitiveInfo.gstin}
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              )}
             </div>
           </div>
 
@@ -70,17 +75,17 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-primary-foreground/80">
-                  <p>Plot No. 3936, Gurujang Village</p>
-                  <p>Talcher Sadar, Anugul, Odisha, India, 759100</p>
+                  <p>{sensitiveInfo.addressLine1}</p>
+                  {sensitiveInfo.addressLine2 && <p>{sensitiveInfo.addressLine2}</p>}
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-accent flex-shrink-0" />
-                <span className="text-sm text-primary-foreground/80">+918908094205</span>
+                <span className="text-sm text-primary-foreground/80">{sensitiveInfo.phone}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-accent flex-shrink-0" />
-                <span className="text-sm text-primary-foreground/80">gslubricantsodisha@gmail.com</span>
+                <span className="text-sm text-primary-foreground/80">{sensitiveInfo.email}</span>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
@@ -95,9 +100,16 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-primary-foreground/60">
-              © 2024 GS Lubricants. All rights reserved.
-            </p>
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-primary-foreground/60">
+                © 2024 GS Lubricants. All rights reserved.
+              </p>
+              {isPrivacyModeActive() && (
+                <span className="text-xs text-primary-foreground/40 bg-primary-foreground/10 px-2 py-1 rounded">
+                  Privacy Mode Active
+                </span>
+              )}
+            </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">
                 Privacy Policy

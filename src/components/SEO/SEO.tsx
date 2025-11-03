@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { getSensitiveInfo } from '@/lib/privacy';
 
 interface SEOProps {
   title: string;
@@ -19,6 +20,35 @@ const SEO = ({
 }: SEOProps) => {
   const fullTitle = `${title} | GS Lubricants`;
   const url = canonical || `https://www.gslubricants.com${window.location.pathname}`;
+  const sensitiveInfo = getSensitiveInfo();
+
+  // Generate organization schema with privacy-aware information
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GS Lubricants",
+    "legalName": sensitiveInfo.companyFullName,
+    "description": "Professional waste oil recycling and base oil manufacturing facility",
+    "url": "https://www.gslubricants.com",
+    "logo": "https://storage.googleapis.com/gpt-engineer-file-uploads/a8NJQyILBZbabaD3KAzUw05rnhD2/uploads/1757839377423-Screenshot 2025-09-14 141209.png",
+    ...(sensitiveInfo.addressLine1 !== "Odisha, India" && {
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": sensitiveInfo.addressLine1,
+        "addressLocality": "Anugul",
+        "addressRegion": "Odisha",
+        "addressCountry": "IN",
+        "postalCode": "759100"
+      }
+    }),
+    ...(sensitiveInfo.email !== "Use contact form" && {
+      "email": sensitiveInfo.email
+    }),
+    ...(sensitiveInfo.phone !== "Contact form available" && {
+      "telephone": sensitiveInfo.phone
+    }),
+    "sameAs": []
+  };
 
   return (
     <Helmet>
@@ -41,9 +71,13 @@ const SEO = ({
       <meta name="twitter:card" content="summary_large_image" />
       
       {/* Structured Data */}
-      {schemaData && (
+      {schemaData ? (
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
+        </script>
+      ) : (
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
         </script>
       )}
     </Helmet>

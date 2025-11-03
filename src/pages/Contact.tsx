@@ -11,6 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import SEO from "@/components/SEO/SEO";
 import Breadcrumbs from "@/components/SEO/Breadcrumbs";
+import { getSensitiveInfo } from "@/lib/privacy";
 import { 
   Phone, 
   Mail, 
@@ -62,6 +63,7 @@ const contactSchema = z.object({
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const sensitiveInfo = getSensitiveInfo();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -141,19 +143,19 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: "Phone",
-      details: ["+918908094205"],
+      details: [sensitiveInfo.phone],
       description: "Call us for immediate assistance"
     },
     {
       icon: <Mail className="h-6 w-6 text-secondary" />,
       title: "Email", 
-      details: ["gslubricantsodisha@gmail.com"],
+      details: [sensitiveInfo.email],
       description: "Send us a message anytime"
     },
     {
       icon: <MapPin className="h-6 w-6 text-accent" />,
       title: "Address",
-      details: ["Plot No. 3936, Gurujang Village", "Talcher Sadar, Anugul, Odisha, India, 759100"],
+      details: [sensitiveInfo.addressLine1, sensitiveInfo.addressLine2].filter(Boolean),
       description: "Visit our facility"
     },
     {
@@ -175,8 +177,8 @@ const Contact = () => {
     <div className="min-h-screen">
       <SEO 
         title="Contact Us - Get Your Free Quote Today"
-        description="Contact GS Lubricants for professional waste oil recycling services in Ahmedabad. Call +918908094205 or email us at gslubricantsodisha@gmail.com for a free consultation."
-        keywords="contact oil recycling Ahmedabad, waste oil collection quote, oil recycling consultation, GS Lubricants contact"
+        description={`Contact GS Lubricants for professional waste oil recycling services in Odisha. Call ${sensitiveInfo.phone} or email us at ${sensitiveInfo.email} for a free consultation.`}
+        keywords="contact oil recycling Odisha, waste oil collection quote, oil recycling consultation, GS Lubricants contact"
         canonical="https://www.gslubricants.com/contact"
       />
       <Breadcrumbs />
@@ -381,7 +383,7 @@ const Contact = () => {
                 <CardContent className="p-0">
                   <div className="w-full h-80 rounded-lg overflow-hidden">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.8!2d85.2269!3d20.9506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDU3JzAyLjIiTiA4NcKwMTMnMzYuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                      src={sensitiveInfo.mapUrl}
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}

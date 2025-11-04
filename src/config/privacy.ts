@@ -21,8 +21,8 @@ export const PRIVACY_CONFIG = {
   // Original company name: "M/S Gouri Shankar Lubricants"
   companyFullName: "GS Lubricants",
   
-  // Original address: "Plot No. 3936, Gurujang Village, Talcher Sadar, Anugul, Odisha, India, 759100"
-  addressLine1: "Odisha, India",
+  // Original address: "Plot -861 Kedargori, Old Town Bhubaneswar, PIN-751002"
+  addressLine1: "Bhubaneswar, Odisha, India",
   addressLine2: "",
   
   // Original phone: "+918908094205"

@@ -186,7 +186,7 @@ const About = () => {
                 </blockquote>
                 <div className="flex items-center space-x-2 text-primary">
                   <div className="w-12 h-0.5 bg-primary"></div>
-                  <span className="font-semibold">Muna Pani, General Manager</span>
+                  <span className="font-semibold">Biswajeet Sahoo, General Manager</span>
                 </div>
               </CardContent>
             </Card>

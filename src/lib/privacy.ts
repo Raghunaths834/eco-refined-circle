@@ -21,9 +21,9 @@ export const getSensitiveInfo = () => {
 
   // Return actual information
   return {
-    companyFullName: "M/S Gouri Shankar Lubricants",
-    addressLine1: "Plot No. 3936, Gurujang Village",
-    addressLine2: "Talcher Sadar, Anugul, Odisha, India, 759100",
+    companyFullName: "GS Lubricants",
+    addressLine1: "Plot -861 Kedargori, Old Town Bhubaneswar",
+    addressLine2: "PIN-751002",
     phone: "+918908094205",
     email: "gslubricantsodisha@gmail.com",
     gstin: "21AAJFG6323M1ZE",

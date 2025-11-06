@@ -31,7 +31,7 @@ export const PRIVACY_CONFIG = {
   // Original email: "gslubricantsodisha@gmail.com"
   email: "Use contact form",
   
-  // Original GSTIN: "31AAJFG6323M1ZE"
+  // Original GSTIN: "GBJH453487RH5465326"
   gstin: "",
   
   // Map URL replacement (optional)

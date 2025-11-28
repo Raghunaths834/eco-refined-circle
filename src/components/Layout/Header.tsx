@@ -30,7 +30,7 @@ const Header = () => {
             <img 
               src={gsLogo} 
               alt="GS Lubricants Logo" 
-              className="h-16 w-auto md:h-20 object-contain antialiased"
+              className="h-12 w-auto"
             />
           </Link>
 

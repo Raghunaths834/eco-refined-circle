@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Recycle } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { getSensitiveInfo } from "@/lib/privacy";
+import gsLogo from "@/assets/gs-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,14 +26,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-gradient-hero p-2 rounded-lg">
-              <Recycle className="h-6 w-6 text-primary-foreground" />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-foreground">GS Lubricants</h1>
-              <p className="text-xs text-muted-foreground">{sensitiveInfo.companyFullName}</p>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={gsLogo} 
+              alt="GS Lubricants Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

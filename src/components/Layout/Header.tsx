@@ -26,13 +26,15 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <img 
-              src={gsLogo} 
-              alt="GS Lubricants Logo" 
-              className="h-12 w-auto"
-            />
-            <span className="text-xl font-bold text-foreground">GS LUBRICANTS</span>
+          <Link to="/" className="flex items-center gap-2">
+            <div className="bg-[#2C5F4E] p-2 rounded">
+              <img 
+                src={gsLogo} 
+                alt="GS Lubricants Logo" 
+                className="h-8 w-auto"
+              />
+            </div>
+            <span className="text-lg font-semibold text-foreground">GS Lubricants</span>
           </Link>
 
           {/* Desktop Navigation */}

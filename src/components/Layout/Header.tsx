@@ -30,7 +30,8 @@ const Header = () => {
             <img 
               src={gsLogo} 
               alt="GS Lubricants Logo" 
-              className="h-12 w-auto"
+              className="h-16 w-auto md:h-20 object-contain"
+              style={{ imageRendering: 'crisp-edges' }}
             />
           </Link>
 

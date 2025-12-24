@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Recycle, Phone, Mail, MapPin, Clock, Shield, ExternalLink } from "lucide-react";
+import { Recycle, Mail, MapPin, Clock, Shield, ExternalLink } from "lucide-react";
 import { getSensitiveInfo, isPrivacyModeActive } from "@/lib/privacy";
 
 const Footer = () => {
@@ -78,10 +78,6 @@ const Footer = () => {
                   <p>{sensitiveInfo.addressLine1}</p>
                   {sensitiveInfo.addressLine2 && <p>{sensitiveInfo.addressLine2}</p>}
                 </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-accent flex-shrink-0" />
-                <span className="text-sm text-primary-foreground/80">{sensitiveInfo.phone}</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-accent flex-shrink-0" />

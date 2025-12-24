@@ -25,7 +25,7 @@ export const getSensitiveInfo = () => {
     addressLine1: "Plot -861 Kedargori, Old Town Bhubaneswar",
     addressLine2: "PIN-751002",
     phone: "+918908094205",
-    email: "gslubricantsodisha@gmail.com",
+    email: "info@gslubricants.com",
     gstin: "GBJH453487RH5465326",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.253!2d85.8199!3d20.2544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7f0c8e9d5f1%3A0x7c5f7b8c9d4e5f6a!2sKedargouri%2C%20Old%20Town%2C%20Bhubaneswar%2C%20Odisha!5e0!3m2!1sen!2sin!4v1234567890"
   };

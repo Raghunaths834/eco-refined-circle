@@ -13,7 +13,6 @@ import SEO from "@/components/SEO/SEO";
 import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 import { getSensitiveInfo } from "@/lib/privacy";
 import { 
-  Phone, 
   Mail, 
   MapPin, 
   Clock, 
@@ -140,12 +139,6 @@ const Contact = () => {
     }
   };
   const contactInfo = [
-    {
-      icon: <Phone className="h-6 w-6 text-primary" />,
-      title: "Phone",
-      details: [sensitiveInfo.phone],
-      description: "Call us for immediate assistance"
-    },
     {
       icon: <Mail className="h-6 w-6 text-secondary" />,
       title: "Email", 

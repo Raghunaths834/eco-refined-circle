@@ -197,7 +197,7 @@ const Contact = () => {
       {/* Contact Information */}
       <section id="phone-section" className="py-16 bg-background border-b">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {contactInfo.map((info, index) => (
               <Card key={index} className="bg-gradient-card border-0 shadow-soft hover:shadow-medium transition-all duration-300 text-center">
                 <CardContent className="p-6">

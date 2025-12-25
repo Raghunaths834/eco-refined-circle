@@ -139,7 +139,7 @@ const Index = () => {
       {/* Stats Section */}
       <section className="py-12 bg-background border-b">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center animate-fade-in hover-scale" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="flex justify-center mb-3">

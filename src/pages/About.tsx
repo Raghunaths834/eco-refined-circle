@@ -168,7 +168,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Badge variant="outline" className="mb-4">
-                From Manager's Desk
+                From Managing Director's Desk
               </Badge>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8">
                 A Message from Our Leadership
@@ -186,7 +186,7 @@ const About = () => {
                 </blockquote>
                 <div className="flex items-center space-x-2 text-primary">
                   <div className="w-12 h-0.5 bg-primary"></div>
-                  <span className="font-semibold">Biswajeet Sahoo, General Manager</span>
+                  <span className="font-semibold">Managing Director</span>
                 </div>
               </CardContent>
             </Card>

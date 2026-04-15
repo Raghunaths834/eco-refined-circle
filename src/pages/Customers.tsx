@@ -113,7 +113,7 @@ const Customers = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Our Customers - Trusted by 30+ Businesses"
+        title="Our Customers - Trusted by 60+ Businesses"
         description="GS Lubricants serves 60+ businesses across manufacturing, transportation, commercial, and government sectors. 99.8% customer satisfaction with reliable oil recycling services."
         keywords="oil recycling clients, waste oil management customers, industrial oil recycling, commercial oil recycling"
         canonical="https://www.gslubricants.com/customers"

@@ -79,25 +79,25 @@ const Customers = () => {
       icon: <Factory className="h-8 w-8 text-primary" />,
       name: "Manufacturing",
       description: "Industrial facilities, machinery maintenance, and production operations",
-      clients: "9+"
+      clients: "20+"
     },
     {
       icon: <Truck className="h-8 w-8 text-secondary" />,
       name: "Transportation",
       description: "Fleet operations, logistics companies, and commercial vehicle services",
-      clients: "5+"
+      clients: "10+"
     },
     {
       icon: <Building className="h-8 w-8 text-accent" />,
       name: "Commercial",
       description: "Office buildings, retail centers, and commercial property management",
-      clients: "12+"
+      clients: "22+"
     },
     {
       icon: <Users className="h-8 w-8 text-eco-green" />,
       name: "Government",
       description: "Municipal facilities, public works, and government fleet operations",
-      clients: "4+"
+      clients: "8+"
     }
   ];
 
@@ -114,7 +114,7 @@ const Customers = () => {
     <div className="min-h-screen">
       <SEO 
         title="Our Customers - Trusted by 30+ Businesses"
-        description="GS Lubricants serves 30+ businesses across manufacturing, transportation, commercial, and government sectors. 99.8% customer satisfaction with reliable oil recycling services."
+        description="GS Lubricants serves 60+ businesses across manufacturing, transportation, commercial, and government sectors. 99.8% customer satisfaction with reliable oil recycling services."
         keywords="oil recycling clients, waste oil management customers, industrial oil recycling, commercial oil recycling"
         canonical="https://www.gslubricants.com/customers"
       />
@@ -128,7 +128,7 @@ const Customers = () => {
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Trusted by 
-              <span className="text-primary block mt-2">30+ Businesses</span>
+              <span className="text-primary block mt-2">60+ Businesses</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
               From small businesses to large corporations, our customers rely on us for 
@@ -143,7 +143,7 @@ const Customers = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">30+</div>
+              <div className="text-4xl font-bold text-primary mb-2">60+</div>
               <div className="text-muted-foreground">Active Clients</div>
             </div>
             <div className="text-center">

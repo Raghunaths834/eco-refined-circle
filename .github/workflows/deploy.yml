@@ -8,7 +8,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,12 +19,12 @@ jobs:
 
       - name: Install and build (Vite/React)
         run: |
-          npm ci
+          npm install
           npm run build
 
       - name: List build output
         run: ls -la dist
-      
+        
       - name: Deploy build folder to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -35,7 +34,7 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: ./dist/
-          server-dir: /                     # this FTP user’s home IS gslubricants.com/public_html
+          server-dir: / # this FTP user's home IS gslubricants.com/public_html
           dangerous-clean-slate: true
           log-level: verbose
           exclude: |

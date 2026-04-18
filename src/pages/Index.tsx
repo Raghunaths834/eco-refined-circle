@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO/SEO";
 import Breadcrumbs from "@/components/SEO/Breadcrumbs";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { 
   Recycle, 
@@ -24,6 +24,7 @@ import oilRecyclingBg from "@/assets/oil-recycling-equipment.jpg";
 import facilityTeam from "@/assets/facility-team.jpg";
 import oilProcessing from "@/assets/oil-processing.jpg";
 import qualityLab from "@/assets/quality-lab.jpg";
+import qualityLabTech from "@/assets/quality-lab-tech.jpg";
 
 const Index = () => {
   const autoplayPlugin = useRef(
@@ -34,6 +35,7 @@ const Index = () => {
     { src: facilityTeam, alt: "GS Lubricants facility team with oil processing equipment" },
     { src: oilProcessing, alt: "Oil refining and filtration process at GS Lubricants" },
     { src: qualityLab, alt: "Quality testing laboratory at GS Lubricants" },
+    { src: qualityLabTech, alt: "Lab technician analyzing oil quality data at GS Lubricants" },
   ];
 
   const features = [
@@ -126,14 +128,26 @@ const Index = () => {
             <CarouselContent className="h-full ml-0">
               {heroImages.map((img, idx) => (
                 <CarouselItem key={idx} className="h-full pl-0 basis-full">
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className="w-full h-full object-contain opacity-80"
-                  />
+                  <div
+                    className="w-full h-full"
+                    style={{
+                      WebkitMaskImage:
+                        "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
+                      maskImage:
+                        "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
+                    }}
+                  >
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-contain opacity-80"
+                    />
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselPrevious className="left-4 z-20 bg-white/20 border-white/40 text-white hover:bg-white/30 hover:text-white" />
+            <CarouselNext className="right-4 z-20 bg-white/20 border-white/40 text-white hover:bg-white/30 hover:text-white" />
           </Carousel>
         </div>
         <div className="absolute inset-0 bg-black/30 pointer-events-none" />

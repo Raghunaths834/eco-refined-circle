@@ -1,9 +1,12 @@
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO/SEO";
 import Breadcrumbs from "@/components/SEO/Breadcrumbs";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import { 
   Recycle, 
   Leaf, 
@@ -18,8 +21,21 @@ import {
   Gauge
 } from "lucide-react";
 import oilRecyclingBg from "@/assets/oil-recycling-equipment.jpg";
+import facilityTeam from "@/assets/facility-team.jpg";
+import oilProcessing from "@/assets/oil-processing.jpg";
+import qualityLab from "@/assets/quality-lab.jpg";
 
 const Index = () => {
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: false })
+  );
+
+  const heroImages = [
+    { src: facilityTeam, alt: "GS Lubricants facility team with oil processing equipment" },
+    { src: oilProcessing, alt: "Oil refining and filtration process at GS Lubricants" },
+    { src: qualityLab, alt: "Quality testing laboratory at GS Lubricants" },
+  ];
+
   const features = [
     {
       icon: <Recycle className="h-8 w-8 text-primary" />,
@@ -101,12 +117,24 @@ const Index = () => {
       />
       {/* Hero Section */}
       <section className="relative bg-gradient-hero-animated bg-gradient-animated animate-gradient-wave overflow-hidden">
-        <div className="absolute inset-0 bg-black/60" />
-        <img 
-          src={oilRecyclingBg}
-          alt="Modern waste oil recycling equipment and facility in Ahmedabad"
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
-        />
+        <Carousel
+          opts={{ loop: true, align: "start" }}
+          plugins={[autoplayPlugin.current]}
+          className="absolute inset-0 w-full h-full"
+        >
+          <CarouselContent className="h-full ml-0">
+            {heroImages.map((img, idx) => (
+              <CarouselItem key={idx} className="h-full pl-0 basis-full">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover opacity-30"
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+        <div className="absolute inset-0 bg-black/60 pointer-events-none" />
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-3xl">
             <Badge variant="secondary" className="mb-6 bg-primary/20 text-primary-foreground border-primary/30 animate-fade-in">

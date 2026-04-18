@@ -117,23 +117,25 @@ const Index = () => {
       />
       {/* Hero Section */}
       <section className="relative bg-gradient-hero-animated bg-gradient-animated animate-gradient-wave overflow-hidden">
-        <Carousel
-          opts={{ loop: true, align: "start" }}
-          plugins={[autoplayPlugin.current]}
-          className="absolute inset-0 w-full h-full"
-        >
-          <CarouselContent className="h-full ml-0">
-            {heroImages.map((img, idx) => (
-              <CarouselItem key={idx} className="h-full pl-0 basis-full">
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-full object-cover opacity-30"
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+        <div className="absolute inset-0">
+          <Carousel
+            opts={{ loop: true, align: "start" }}
+            plugins={[autoplayPlugin.current]}
+            className="h-full [&>div]:h-full"
+          >
+            <CarouselContent className="h-full ml-0">
+              {heroImages.map((img, idx) => (
+                <CarouselItem key={idx} className="h-full pl-0 basis-full">
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-cover opacity-30"
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
         <div className="absolute inset-0 bg-black/60 pointer-events-none" />
         <div className="relative container mx-auto px-4 py-24 lg:py-32">
           <div className="max-w-3xl">

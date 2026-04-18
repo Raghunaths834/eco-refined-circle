@@ -46,9 +46,10 @@ const Terms = () => {
               {/* Introduction */}
               <div className="bg-card p-6 rounded-lg border">
                 <p className="text-foreground">
-                  Welcome to {sensitiveInfo.companyFullName} ("GS Lubricants," "we," "us," or "our"). These Terms of Service 
-                  ("Terms") govern your use of our website and services related to lubricant manufacturing, oil recycling, 
-                  and waste oil management. By accessing our website or using our services, you agree to be bound by these Terms.
+                  Welcome to Gouri Shankar Lubricants (henceforth named as "GS Lubricants," "we," "us," or "our"). These Terms 
+                  of Service ("Terms") govern your use of our website and services related to lubricant manufacturing, oil 
+                  recycling, and waste oil management. By accessing our website or using our services, you agree to be bound 
+                  by these Terms.
                 </p>
               </div>
 

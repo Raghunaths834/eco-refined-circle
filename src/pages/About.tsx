@@ -17,6 +17,7 @@ import {
   Building,
   Globe
 } from "lucide-react";
+import leadershipManager from "@/assets/leadership-manager.jpg";
 
 const About = () => {
   const values = [
@@ -175,18 +176,29 @@ const About = () => {
               </h2>
             </div>
             
-            <Card className="bg-gradient-card border-0 shadow-medium">
-              <CardContent className="p-8 lg:p-12">
-                <blockquote className="text-lg text-muted-foreground leading-relaxed italic mb-8">
-                  "At GS Lubricants, we believe that environmental responsibility and business success go hand in hand.
-                  Our commitment to sustainable oil recycling isn't just about compliance—it's about creating a legacy 
-                  for future generations. Every gallon of oil we process represents our dedication to turning waste into 
-                  valuable resources while protecting our planet. We're proud to partner with businesses who share our 
-                  vision of a more sustainable future."
-                </blockquote>
-                <div className="flex items-center space-x-2 text-primary">
-                  <div className="w-12 h-0.5 bg-primary"></div>
-                  <span className="font-semibold">Managing Director</span>
+            <Card className="bg-gradient-card border-0 shadow-medium overflow-hidden">
+              <CardContent className="p-0">
+                <div className="grid md:grid-cols-5 gap-0">
+                  <div className="md:col-span-2 relative bg-muted">
+                    <img
+                      src={leadershipManager}
+                      alt="Manager at GS Lubricants office"
+                      className="w-full h-full object-cover min-h-[300px]"
+                    />
+                  </div>
+                  <div className="md:col-span-3 p-8 lg:p-12">
+                    <blockquote className="text-lg text-muted-foreground leading-relaxed italic mb-8">
+                      "At GS Lubricants, we believe that environmental responsibility and business success go hand in hand.
+                      Our commitment to sustainable oil recycling isn't just about compliance—it's about creating a legacy 
+                      for future generations. Every gallon of oil we process represents our dedication to turning waste into 
+                      valuable resources while protecting our planet. We're proud to partner with businesses who share our 
+                      vision of a more sustainable future."
+                    </blockquote>
+                    <div className="flex items-center space-x-2 text-primary">
+                      <div className="w-12 h-0.5 bg-primary"></div>
+                      <span className="font-semibold">Managing Director</span>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>

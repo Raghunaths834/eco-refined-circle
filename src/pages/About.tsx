@@ -179,11 +179,11 @@ const About = () => {
             <Card className="bg-gradient-card border-0 shadow-medium overflow-hidden">
               <CardContent className="p-0">
                 <div className="grid md:grid-cols-5 gap-0">
-                  <div className="md:col-span-2 relative bg-muted">
+                  <div className="md:col-span-2 relative bg-muted flex items-center justify-center p-4">
                     <img
                       src={leadershipManager}
                       alt="Manager at GS Lubricants office"
-                      className="w-full h-full object-cover min-h-[300px]"
+                      className="w-full h-auto object-contain"
                     />
                   </div>
                   <div className="md:col-span-3 p-8 lg:p-12">

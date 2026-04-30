@@ -181,7 +181,7 @@ const Products = () => {
     <div className="min-h-screen">
       <SEO 
         title="Recycled Oil Products & Services - Base Oils, Industrial Lubricants"
-        description="Premium recycled oil products including re-refined base oils, industrial lubricants, biofuels, and specialty fluids. API Group II standards, ISO certified processing, 98% recovery rate."
+        description="Premium recycled oil products including re-refined base oils, industrial lubricants, biofuels, and specialty fluids. API Group II standards, ISO certified processing, 70% recovery rate."
         keywords="recycled base oil, re-refined oil, industrial lubricants, biofuel, specialty fluids, API Group II oil, sustainable lubricants"
         canonical="https://www.gslubricants.com/products"
         schemaData={productSchema}
@@ -392,7 +392,7 @@ const Products = () => {
               <Card className="bg-gradient-card border-0 shadow-soft">
                 <CardContent className="p-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">98%</div>
+                    <div className="text-3xl font-bold text-primary mb-2">70%</div>
                     <div className="text-sm text-muted-foreground mb-4">Recovery Rate</div>
                     <p className="text-muted-foreground text-sm">
                       Industry-leading recovery rate through advanced processing technology

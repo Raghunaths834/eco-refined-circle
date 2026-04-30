@@ -20,11 +20,11 @@ import {
   Mail,
   Gauge
 } from "lucide-react";
-import oilRecyclingBg from "@/assets/oil-recycling-equipment.jpg";
-import facilityTeam from "@/assets/facility-team.jpg";
-import oilProcessing from "@/assets/oil-processing.jpg";
-import qualityLab from "@/assets/quality-lab.jpg";
-import qualityLabTech from "@/assets/quality-lab-tech.jpg";
+import oilRecyclingBg from "@/assets/oil-recycling-equipment.webp";
+import facilityTeam from "@/assets/facility-team.webp";
+import oilProcessing from "@/assets/oil-processing.webp";
+import qualityLab from "@/assets/quality-lab.webp";
+import qualityLabTech from "@/assets/quality-lab-tech.webp";
 
 const Index = () => {
   const autoplayPlugin = useRef(
@@ -141,6 +141,9 @@ const Index = () => {
                       src={img.src}
                       alt={img.alt}
                       className="w-full h-full object-contain opacity-80"
+                      loading={idx === 0 ? "eager" : "lazy"}
+                      fetchPriority={idx === 0 ? "high" : "low"}
+                      decoding="async"
                     />
                   </div>
                 </CarouselItem>

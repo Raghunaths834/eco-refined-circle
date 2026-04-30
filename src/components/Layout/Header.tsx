@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { getSensitiveInfo } from "@/lib/privacy";
-import gsLogo from "@/assets/gs-logo.png";
+import gsLogo from "@/assets/gs-logo.webp";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,6 +28,8 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-0.5">
             <img 
+              fetchPriority="high"
+              decoding="async"
               src={gsLogo} 
               alt="GS Lubricants Logo" 
               className="h-12 w-auto"

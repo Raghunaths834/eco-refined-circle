@@ -17,7 +17,7 @@ import {
   Building,
   Globe
 } from "lucide-react";
-import leadershipManager from "@/assets/leadership-manager.jpg";
+import leadershipManager from "@/assets/leadership-manager.webp";
 
 const About = () => {
   const values = [
@@ -184,6 +184,8 @@ const About = () => {
                       src={leadershipManager}
                       alt="Manager at GS Lubricants office"
                       className="w-full h-auto object-contain"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="md:col-span-3 p-8 lg:p-12">

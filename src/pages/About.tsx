@@ -183,8 +183,6 @@ const About = () => {
                     <img
                       src={leadershipManager}
                       alt="Manager at GS Lubricants office"
-                      loading="lazy"
-                      decoding="async"
                       className="w-full h-auto object-contain"
                     />
                   </div>

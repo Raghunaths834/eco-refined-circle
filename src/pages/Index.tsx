@@ -140,9 +140,6 @@ const Index = () => {
                     <img
                       src={img.src}
                       alt={img.alt}
-                      loading={idx === 0 ? "eager" : "lazy"}
-                      decoding="async"
-                      {...(idx === 0 ? { fetchPriority: "high" as const } : {})}
                       className="w-full h-full object-contain opacity-80"
                     />
                   </div>

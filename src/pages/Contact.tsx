@@ -148,7 +148,7 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6 text-accent" />,
       title: "Address",
-      details: [sensitiveInfo.addressLine1, sensitiveInfo.addressLine2].filter(Boolean),
+      details: ["Corporate Office address", sensitiveInfo.addressLine1, sensitiveInfo.addressLine2].filter(Boolean),
       description: "Visit our facility"
     },
     {

@@ -75,6 +75,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-primary-foreground/80">
+                  <p className="font-medium text-primary-foreground">Corporate Office address</p>
                   <p>{sensitiveInfo.addressLine1}</p>
                   {sensitiveInfo.addressLine2 && <p>{sensitiveInfo.addressLine2}</p>}
                 </div>

@@ -184,6 +184,8 @@ const About = () => {
                       src={leadershipManager}
                       alt="Manager at GS Lubricants office"
                       className="w-full h-auto object-contain"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="md:col-span-3 p-8 lg:p-12">

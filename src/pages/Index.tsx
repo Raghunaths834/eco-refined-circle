@@ -141,6 +141,9 @@ const Index = () => {
                       src={img.src}
                       alt={img.alt}
                       className="w-full h-full object-contain opacity-80"
+                      loading={idx === 0 ? "eager" : "lazy"}
+                      fetchPriority={idx === 0 ? "high" : "low"}
+                      decoding="async"
                     />
                   </div>
                 </CarouselItem>

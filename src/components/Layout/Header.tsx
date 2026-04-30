@@ -28,6 +28,8 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-0.5">
             <img 
+              fetchPriority="high"
+              decoding="async"
               src={gsLogo} 
               alt="GS Lubricants Logo" 
               className="h-12 w-auto"

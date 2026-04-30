@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { getSensitiveInfo } from "@/lib/privacy";
-import gsLogo from "@/assets/gs-logo.png";
+import gsLogo from "@/assets/gs-logo.webp";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

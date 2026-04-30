@@ -17,7 +17,7 @@ import {
   Building,
   Globe
 } from "lucide-react";
-import leadershipManager from "@/assets/leadership-manager.jpg";
+import leadershipManager from "@/assets/leadership-manager.webp";
 
 const About = () => {
   const values = [

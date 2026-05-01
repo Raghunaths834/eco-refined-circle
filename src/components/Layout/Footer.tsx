@@ -99,7 +99,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-2">
               <p className="text-sm text-primary-foreground/60">
-                © 2024 GS Lubricants. All rights reserved.
+                © 2026 GS Lubricants. All rights reserved.
               </p>
               {isPrivacyModeActive() && (
                 <span className="text-xs text-primary-foreground/40 bg-primary-foreground/10 px-2 py-1 rounded">

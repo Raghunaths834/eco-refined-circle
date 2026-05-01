@@ -79,19 +79,19 @@ const Customers = () => {
       icon: <Factory className="h-8 w-8 text-primary" />,
       name: "Manufacturing",
       description: "Industrial facilities, machinery maintenance, and production operations",
-      clients: "20+"
+      clients: "26+"
     },
     {
       icon: <Truck className="h-8 w-8 text-secondary" />,
       name: "Transportation",
       description: "Fleet operations, logistics companies, and commercial vehicle services",
-      clients: "10+"
+      clients: "16+"
     },
     {
       icon: <Building className="h-8 w-8 text-accent" />,
       name: "Commercial",
       description: "Office buildings, retail centers, and commercial property management",
-      clients: "22+"
+      clients: "10+"
     },
     {
       icon: <Users className="h-8 w-8 text-eco-green" />,

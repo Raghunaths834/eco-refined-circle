@@ -22,8 +22,8 @@ export const getSensitiveInfo = () => {
   // Return actual information
   return {
     companyFullName: "GS Lubricants",
-    addressLine1: "Plot -861 Kedargori, Old Town, Bhubaneswar",
-    addressLine2: "Odisha, India, PIN-751002",
+    addressLine1: "Plot -861 Kedargori, Old Town, Bhubaneswar, Odisha, India",
+    addressLine2: "PIN-751002",
     phone: "",
     email: "info@gslubricants.com",
     gstin: "21AAJFG6323M1ZE",

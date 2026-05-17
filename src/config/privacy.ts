@@ -21,7 +21,7 @@ export const PRIVACY_CONFIG = {
   // Original company name: "M/S Gouri Shankar Lubricants"
   companyFullName: "GS Lubricants",
   
-  // Original address: "Plot -861 Kedargori, Old Town Bhubaneswar, PIN-751002"
+  // Original address: "Plot -861 Kedargori, Old Town, Bhubaneswar, Odisha, India, PIN-751002"
   addressLine1: "Bhubaneswar, Odisha, India",
   addressLine2: "",
   

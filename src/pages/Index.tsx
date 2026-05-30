@@ -112,8 +112,8 @@ const Index = () => {
     <div className="min-h-screen">
       <SEO 
         title="Professional Waste Oil Recycling & Base Oil Manufacturing"
-        description="Leading waste oil recycling facility in Bhubaneswar, Odisha. We transform used lubricants into high-quality base oils through sustainable refining processes. Eco-friendly solutions."
-        keywords="waste oil recycling, base oil manufacturing, lubricant refining, oil recycling Bhubaneswar, oil recycling Odisha, sustainable oil processing, automotive oil recycling, industrial lubricants"
+        description="Leading waste oil recycling facility in Angul, Odisha. We transform used lubricants into high-quality base oils through sustainable refining processes. Eco-friendly solutions."
+        keywords="waste oil recycling, base oil manufacturing, lubricant refining, oil recycling Angul, oil recycling Odisha, sustainable oil processing, automotive oil recycling, industrial lubricants"
         canonical="https://www.gslubricants.com/"
         schemaData={faqSchema}
       />

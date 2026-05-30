@@ -71,8 +71,8 @@ const About = () => {
     <div className="min-h-screen">
       <SEO 
         title="About Us - Leading Sustainable Oil Recycling Company"
-        description="Over 7 years of excellence in waste oil recycling. Facility in Bhubaneswar, Odisha with high recovery rate. Learn about our mission, values, and commitment to environmental sustainability."
-        keywords="oil recycling company, waste oil recycling facility Bhubaneswar, Odisha oil recycling, sustainable lubricants, environmental management"
+        description="Over 7 years of excellence in waste oil recycling. Facility in Angul, Odisha with high recovery rate. Learn about our mission, values, and commitment to environmental sustainability."
+        keywords="oil recycling company, waste oil recycling facility Angul, Odisha oil recycling, sustainable lubricants, environmental management"
         canonical="https://www.gslubricants.com/about"
       />
       <Breadcrumbs />

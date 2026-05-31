@@ -254,7 +254,7 @@ const Contact = () => {
                         <Label htmlFor="lastName">Last Name *</Label>
                         <Input 
                           id="lastName" 
-                          placeholder="Smith" 
+                          placeholder="Agarwal" 
                           className="bg-background"
                           value={formData.lastName}
                           onChange={(e) => handleInputChange("lastName", e.target.value)}
@@ -281,7 +281,7 @@ const Contact = () => {
                         <Input 
                           id="email" 
                           type="email" 
-                          placeholder="john@company.com" 
+                          placeholder="Ankit@company.com" 
                           className="bg-background"
                           value={formData.email}
                           onChange={(e) => handleInputChange("email", e.target.value)}

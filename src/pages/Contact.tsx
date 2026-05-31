@@ -243,7 +243,7 @@ const Contact = () => {
                         <Label htmlFor="firstName">First Name *</Label>
                         <Input 
                           id="firstName" 
-                          placeholder="John" 
+                          placeholder="Ankit" 
                           className="bg-background"
                           value={formData.firstName}
                           onChange={(e) => handleInputChange("firstName", e.target.value)}

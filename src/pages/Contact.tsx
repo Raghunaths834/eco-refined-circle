@@ -243,7 +243,7 @@ const Contact = () => {
                         <Label htmlFor="firstName">First Name *</Label>
                         <Input 
                           id="firstName" 
-                          placeholder="John" 
+                          placeholder="Ankit" 
                           className="bg-background"
                           value={formData.firstName}
                           onChange={(e) => handleInputChange("firstName", e.target.value)}
@@ -254,7 +254,7 @@ const Contact = () => {
                         <Label htmlFor="lastName">Last Name *</Label>
                         <Input 
                           id="lastName" 
-                          placeholder="Smith" 
+                          placeholder="Agarwal" 
                           className="bg-background"
                           value={formData.lastName}
                           onChange={(e) => handleInputChange("lastName", e.target.value)}
@@ -281,7 +281,7 @@ const Contact = () => {
                         <Input 
                           id="email" 
                           type="email" 
-                          placeholder="john@company.com" 
+                          placeholder="Ankit@company.com" 
                           className="bg-background"
                           value={formData.email}
                           onChange={(e) => handleInputChange("email", e.target.value)}
@@ -293,7 +293,7 @@ const Contact = () => {
                         <Input 
                           id="phone" 
                           type="tel" 
-                          placeholder="+1 (555) 123-4567" 
+                          placeholder="+91 98765 43210" 
                           className="bg-background"
                           value={formData.phone}
                           onChange={(e) => handleInputChange("phone", e.target.value)}

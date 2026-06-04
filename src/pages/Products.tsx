@@ -17,7 +17,7 @@ import {
   Factory,
   Truck,
   FlaskConical,
-  Barrel,
+  Cylinder as Barrel,
   Building2,
 } from "lucide-react";
 

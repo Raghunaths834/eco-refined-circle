@@ -27,7 +27,7 @@ export const getSensitiveInfo = () => {
     phone: "",
     email: "info@gslubricants.com",
     gstin: "21AAJFG6323M1ZE",
-    mapUrl: "https://www.google.com/maps?q=Gurujang,Talcher,Angul,Odisha&output=embed"
+    mapUrl: "https://www.google.com/maps?q=21.022208,85.198242&z=15&output=embed"
   };
 };
 

@@ -27,7 +27,8 @@ export const getSensitiveInfo = () => {
     phone: "",
     email: "info@gslubricants.com",
     gstin: "21AAJFG6323M1ZE",
-    mapUrl: "https://www.google.com/maps?q=21.022208,85.198242&z=15&output=embed"
+    mapUrl: "https://www.google.com/maps?q=21.022208,85.198242&z=15&output=embed",
+    mapUrl2: "https://www.google.com/maps?q=21.016914,85.198681&z=15&output=embed"
   };
 };
 

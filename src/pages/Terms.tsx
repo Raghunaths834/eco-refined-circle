@@ -175,8 +175,8 @@ const Terms = () => {
                 <h2 className="text-2xl font-bold text-foreground">Environmental Compliance</h2>
                 <div className="bg-card p-6 rounded-lg border">
                   <p className="text-muted-foreground">
-                    GS Lubricants operates in compliance with environmental regulations including ISO 14001 standards. Both 
-                    parties agree to comply with all applicable environmental laws and regulations. Clients are responsible 
+                    GS Lubricants operates in compliance with environmental regulations including ISO 9001-2015 standards. Both
+                    parties agree to comply with all applicable environmental laws and regulations. Clients are responsible
                     for maintaining proper documentation and permits for waste oil generation and handling.
                   </p>
                 </div>

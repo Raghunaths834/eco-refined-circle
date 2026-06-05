@@ -52,7 +52,7 @@ const Index = () => {
     {
       icon: <Shield className="h-8 w-8 text-secondary" />,
       title: "Certified Quality",
-      description: "ISO 14001 certified processes ensuring highest quality and environmental standards."
+      description: "ISO 9001-2015 certified processes ensuring highest quality and environmental standards."
     },
     {
       icon: <Award className="h-8 w-8 text-accent" />,
@@ -102,7 +102,7 @@ const Index = () => {
         "name": "Is recycled oil safe and high quality?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, our recycled base oils meet API Group II standards and undergo rigorous quality testing. We maintain a 98% recovery rate and achieve industry-leading quality through our ISO 14001 certified processes."
+          "text": "Yes, our recycled base oils meet API Group II standards and undergo rigorous quality testing. We maintain a 98% recovery rate and achieve industry-leading quality through our ISO 9001-2015 certified processes."
         }
       }
     ]

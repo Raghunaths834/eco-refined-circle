@@ -44,8 +44,8 @@ const About = () => {
   ];
 
   const certifications = [
-    "ISO 14001 Environmental Management",
-    "EPA Certified Recycling Facility", 
+    "ISO 9001-2015 Quality Management",
+    "EPA Certified Recycling Facility",
     "State Environmental License"
   ];
 
@@ -63,7 +63,7 @@ const About = () => {
     {
       year: "2024",
       title: "ISO Certification",
-      description: "Achieved ISO 14001 certification for environmental management systems"
+      description: "Achieved ISO 9001-2015 certification for quality management systems"
     }
   ];
 

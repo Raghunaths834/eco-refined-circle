@@ -27,7 +27,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm">
                 <Shield className="h-4 w-4 text-success" />
-                <span className="text-primary-foreground/80">ISO 14001 Certified</span>
+                <span className="text-primary-foreground/80">ISO 9001-2015 Certified</span>
               </div>
               {sensitiveInfo.gstin && (
                 <a 

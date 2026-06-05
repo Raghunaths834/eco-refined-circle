@@ -371,7 +371,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              {/* Google Map */}
+              {/* Google Map - Corporate Office */}
               <Card className="bg-gradient-card border-0 shadow-soft">
                 <CardContent className="p-0">
                   <div className="w-full h-80 rounded-lg overflow-hidden">
@@ -383,7 +383,25 @@ const Contact = () => {
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="GS Lubricants Location"
+                      title="GS Lubricants Corporate Office"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Google Map - Processing Plant */}
+              <Card className="bg-gradient-card border-0 shadow-soft">
+                <CardContent className="p-0">
+                  <div className="w-full h-80 rounded-lg overflow-hidden">
+                    <iframe
+                      src={sensitiveInfo.mapUrl2}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="GS Lubricants Processing Plant"
                     />
                   </div>
                 </CardContent>

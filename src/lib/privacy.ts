@@ -15,7 +15,8 @@ export const getSensitiveInfo = () => {
       phone: PRIVACY_CONFIG.phone,
       email: PRIVACY_CONFIG.email,
       gstin: PRIVACY_CONFIG.gstin,
-      mapUrl: PRIVACY_CONFIG.mapUrl
+      mapUrl: PRIVACY_CONFIG.mapUrl,
+      mapUrl2: PRIVACY_CONFIG.mapUrl
     };
   }
 

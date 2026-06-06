@@ -45,7 +45,7 @@ const About = () => {
 
   const certifications = [
     "ISO 9001-2015 Quality Management",
-    "EPA Certified Recycling Facility",
+    "EPR Framework followed",
     "State Environmental License"
   ];
 

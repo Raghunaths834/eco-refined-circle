@@ -25,7 +25,7 @@ export const getSensitiveInfo = () => {
     companyFullName: "GS Lubricants",
     addressLine1: "Plot -861 Kedargori, Old Town, Bhubaneswar, Odisha, India",
     addressLine2: "PIN-751002",
-    phone: "",
+    phone: "+91-8908094205",
     email: "info@gslubricants.com",
     gstin: "21AAJFG6323M1ZE",
     mapUrl: "https://www.google.com/maps?q=21.022208,85.198242&z=15&output=embed",

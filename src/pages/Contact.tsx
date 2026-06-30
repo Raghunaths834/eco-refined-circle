@@ -14,6 +14,7 @@ import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 import { getSensitiveInfo } from "@/lib/privacy";
 import { 
   Mail, 
+  Phone,
   MapPin, 
   Clock, 
   MessageSquare,
@@ -144,6 +145,12 @@ const Contact = () => {
       title: "Email", 
       details: [sensitiveInfo.email],
       description: "Send us a message anytime"
+    },
+    {
+      icon: <Phone className="h-6 w-6 text-secondary" />,
+      title: "Phone",
+      details: [sensitiveInfo.phone],
+      description: "Call us for quick assistance"
     },
     {
       icon: <MapPin className="h-6 w-6 text-accent" />,

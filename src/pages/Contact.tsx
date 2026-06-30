@@ -147,6 +147,12 @@ const Contact = () => {
       description: "Send us a message anytime"
     },
     {
+      icon: <Phone className="h-6 w-6 text-secondary" />,
+      title: "Phone",
+      details: [sensitiveInfo.phone],
+      description: "Call us for quick assistance"
+    },
+    {
       icon: <MapPin className="h-6 w-6 text-accent" />,
       title: "Address",
       details: ["Corporate Office address", sensitiveInfo.addressLine1, sensitiveInfo.addressLine2].filter(Boolean),

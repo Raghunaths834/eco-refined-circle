@@ -14,6 +14,7 @@ import Breadcrumbs from "@/components/SEO/Breadcrumbs";
 import { getSensitiveInfo } from "@/lib/privacy";
 import { 
   Mail, 
+  Phone,
   MapPin, 
   Clock, 
   MessageSquare,
